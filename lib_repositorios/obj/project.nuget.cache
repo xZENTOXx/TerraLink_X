@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kN/iB4miVs8=",
+  "dgSpecHash": "OuK0vvcqtdM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\juand\\OneDrive\\Documentos\\2-ACADEMICO\\ITM\\TerraLink\\lib_repositorios\\lib_repositorios.csproj",
+  "projectFilePath": "C:\\Users\\juand\\OneDrive\\Documentos\\2-ACADEMICO\\ITM\\2025-2\\3-Programación de Software\\Entregable\\TerraLink_X\\lib_repositorios\\lib_repositorios.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juand\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\juand\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
