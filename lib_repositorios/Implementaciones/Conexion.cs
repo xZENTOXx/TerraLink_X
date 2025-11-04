@@ -4,19 +4,16 @@ using lib_repositorios.Interfaces;
 
 namespace lib_repositorios.Implementaciones
 {
-    public class Conexion : DbContext, IConexion
+    public partial class Conexion : DbContext, IConexion
     {
         public string? StringConexion { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (string.IsNullOrWhiteSpace(this.StringConexion))
-                throw new InvalidOperationException("Cadena de conexión no configurada.");
-
-            optionsBuilder.UseSqlServer(this.StringConexion!);
+            optionsBuilder.UseSqlServer(this.StringConexion!, p => { });
             optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-        }
 
+        }
         public DbSet<Fincas>? Fincas { get; set; }
         public DbSet<Clientes>? Clientes { get; set; }
         public DbSet<Reservas>? Reservas { get; set; }

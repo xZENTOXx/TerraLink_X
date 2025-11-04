@@ -2,5 +2,9 @@
 
 namespace lib_repositorios.Interfaces
 {
-    public interface IEmpleadosAplicacion : IGenericoAplicacion<Empleados> { }
+    public interface IEmpleadosAplicacion : IGenericoAplicacion<Empleados>
+    {
+        List<Empleados> PorCargo(Empleados? entidad);
+
+    }
 }

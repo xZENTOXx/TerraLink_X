@@ -2,5 +2,7 @@
 
 namespace lib_repositorios.Interfaces
 {
-    public interface ITareasAplicacion : IGenericoAplicacion<Tareas> { }
+    public interface ITareasAplicacion : IGenericoAplicacion<Tareas> {
+    List<Tareas> PorEmpleado(Tareas? entidad);
+    }
 }

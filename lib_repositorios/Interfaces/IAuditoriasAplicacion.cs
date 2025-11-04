@@ -2,5 +2,8 @@
 
 namespace lib_repositorios.Interfaces
 {
-    public interface IAuditoriasAplicacion : IGenericoAplicacion<Auditorias> { }
+    public interface IAuditoriasAplicacion : IGenericoAplicacion <Auditorias>
+    {
+        List<Auditorias> PorAccion(Auditorias? entidad);
+    }
 }

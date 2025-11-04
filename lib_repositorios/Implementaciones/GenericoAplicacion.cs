@@ -1,13 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using lib_repositorios.Interfaces;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace lib_repositorios.Implementaciones
 {
     public class GenericoAplicacion<T> : IGenericoAplicacion<T> where T : class
     {
-        private readonly IConexion IConexion;
+        public readonly IConexion IConexion;
 
         public GenericoAplicacion(IConexion iConexion)
         {

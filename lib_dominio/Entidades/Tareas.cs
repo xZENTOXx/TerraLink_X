@@ -8,8 +8,9 @@ namespace lib_dominio.Entidades
         public int Finca { get; set; }
         public string? Descripcion { get; set; }
         public DateTime FechaAsignacion { get; set; } = DateTime.Today;
-
         public string? Estado { get; set; } = "Pendiente";
+        public Empleados? _Empleado { get; set; }
+        public Fincas? _Finca { get; set; }
 
     }
 }

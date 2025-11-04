@@ -2,5 +2,8 @@
 
 namespace lib_repositorios.Interfaces
 {
-    public interface IReservaServiciosAplicacion : IGenericoAplicacion<ReservaServicios> { }
+    public interface IReservaServiciosAplicacion : IGenericoAplicacion<ReservaServicios> {
+
+        List<ReservaServicios> PorServicio(ReservaServicios? entidad);
+    }
 }

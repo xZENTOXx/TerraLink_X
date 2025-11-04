@@ -5,6 +5,16 @@ namespace lib_repositorios.Implementaciones
 {
     public class EmpleadosAplicacion : GenericoAplicacion<Empleados>, IEmpleadosAplicacion
     {
-        public EmpleadosAplicacion(IConexion iConexion) : base(iConexion) { }
+        public EmpleadosAplicacion(IConexion iConexion) : base(iConexion)
+        {
+        }
+            public List<Empleados> PorCargo(Empleados? entidad)
+        {
+            return this.IConexion!.Empleados!
+            .Where(x => x.Cargo!.Contains(entidad!.Cargo!))
+            .Take(50)
+            .ToList();
+        }
+ 
     }
 }

@@ -2,5 +2,9 @@
 
 namespace lib_repositorios.Interfaces
 {
-    public interface IPagosAplicacion : IGenericoAplicacion<Pagos> { }
+    public interface IPagosAplicacion : IGenericoAplicacion<Pagos>
+    {
+        List<Pagos> PorFechadePago(Pagos? entidad);
+
+    }
 }

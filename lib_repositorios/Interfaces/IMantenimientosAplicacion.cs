@@ -2,5 +2,9 @@
 
 namespace lib_repositorios.Interfaces
 {
-    public interface IMantenimientosAplicacion : IGenericoAplicacion<Mantenimientos> { }
+    public interface IMantenimientosAplicacion : IGenericoAplicacion<Mantenimientos>
+    {
+        List<Mantenimientos> PorResponsable(Mantenimientos? entidad);
+
+    }
 }

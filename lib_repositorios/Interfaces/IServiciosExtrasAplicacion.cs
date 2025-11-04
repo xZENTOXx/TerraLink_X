@@ -2,5 +2,7 @@
 
 namespace lib_repositorios.Interfaces
 {
-    public interface IServiciosExtrasAplicacion : IGenericoAplicacion<ServiciosExtras> { }
+    public interface IServiciosExtrasAplicacion : IGenericoAplicacion<ServiciosExtras> {
+        List<ServiciosExtras> PorNombre(ServiciosExtras? entidad);
+    }
 }

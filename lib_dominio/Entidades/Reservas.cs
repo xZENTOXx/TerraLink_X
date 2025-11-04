@@ -10,5 +10,7 @@ namespace lib_dominio.Entidades
         public decimal Total { get; set; }
         public int Finca { get; set; }
         public int Cliente { get; set; }
+        public Fincas? _Finca { get; set; }
+        public Clientes? _Cliente { get; set; }
     }
 }

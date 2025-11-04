@@ -2,5 +2,9 @@
 
 namespace lib_repositorios.Interfaces
 {
-    public interface IPromocionesAplicacion : IGenericoAplicacion<Promociones> { }
+    public interface IPromocionesAplicacion : IGenericoAplicacion<Promociones>
+    {
+        List<Promociones> PorNombre(Promociones? entidad);
+
+    }
 }

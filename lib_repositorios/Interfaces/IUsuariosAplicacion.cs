@@ -2,5 +2,9 @@
 
 namespace lib_repositorios.Interfaces
 {
-    public interface IUsuariosAplicacion : IGenericoAplicacion<Usuarios> { }
+    public interface IUsuariosAplicacion : IGenericoAplicacion<Usuarios>
+    {
+        List<Usuarios> PorNombre_Usuario(Usuarios? entidad);
+
+    }
 }

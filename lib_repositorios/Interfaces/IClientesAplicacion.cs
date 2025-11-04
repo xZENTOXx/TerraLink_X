@@ -2,5 +2,9 @@
 
 namespace lib_repositorios.Interfaces
 {
-    public interface IClientesAplicacion : IGenericoAplicacion<Clientes> { }
+    public interface IClientesAplicacion : IGenericoAplicacion<Clientes>
+    {
+        List<Clientes> PorCorreo(Clientes? entidad);
+
+    }
 }
