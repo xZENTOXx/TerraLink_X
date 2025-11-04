@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "6GRPuwdgn8M=",
   "success": true,
   "projectFilePath": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_dominio\\lib_dominio.csproj",
+=======
+  "dgSpecHash": "Qtcu1GWo0L4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\juand\\OneDrive\\Documentos\\2-ACADEMICO\\ITM\\2025-2\\3-Programación de Software\\Entregable\\TerraLink_X\\lib_dominio\\lib_dominio.csproj",
+>>>>>>> a126649dabeb58103d688c40428dc32f7d2cbe44
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.21\\microsoft.windowsdesktop.app.ref.8.0.21.nupkg.sha512",

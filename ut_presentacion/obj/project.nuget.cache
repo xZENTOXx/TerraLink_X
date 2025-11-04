@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "W/HEPW4WYuM=",
   "success": true,
   "projectFilePath": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\ut_presentacion\\ut_presentacion.csproj",
+=======
+  "dgSpecHash": "shXszZ2FXas=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\juand\\OneDrive\\Documentos\\2-ACADEMICO\\ITM\\2025-2\\3-Programación de Software\\Entregable\\TerraLink_X\\ut_presentacion\\ut_presentacion.csproj",
+>>>>>>> a126649dabeb58103d688c40428dc32f7d2cbe44
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
