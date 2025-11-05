@@ -1,10 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\juand\\OneDrive\\Documentos\\2-ACADEMICO\\ITM\\2025-2\\3-Programaci\u00F3n de Software\\Entregable\\TerraLink_X\\",
+  "WorkspaceRootPath": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F31BDFDE-DA17-4202-B870-42AA8A7C5F26}|lib_dominio\\lib_dominio.csproj|c:\\users\\juand\\onedrive\\documentos\\2-academico\\itm\\2025-2\\3-programaci\u00F3n de software\\entregable\\terralink_x\\lib_dominio\\lib_dominio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{08BFBCD1-3B7E-4B6A-8D4F-EBC1EA1A9CD3}|lib_repositorios\\lib_repositorios.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\lib_repositorios\\implementaciones\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08BFBCD1-3B7E-4B6A-8D4F-EBC1EA1A9CD3}|lib_repositorios\\lib_repositorios.csproj|solutionrelative:lib_repositorios\\implementaciones\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDED0D19-C1D7-4D00-916F-46849AB76A9A}|asp_servicios\\asp_servicios.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\asp_servicios\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDED0D19-C1D7-4D00-916F-46849AB76A9A}|asp_servicios\\asp_servicios.csproj|solutionrelative:asp_servicios\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31BDFDE-DA17-4202-B870-42AA8A7C5F26}|lib_dominio\\lib_dominio.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\lib_dominio\\lib_dominio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{F31BDFDE-DA17-4202-B870-42AA8A7C5F26}|lib_dominio\\lib_dominio.csproj|solutionrelative:lib_dominio\\lib_dominio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDED0D19-C1D7-4D00-916F-46849AB76A9A}|asp_servicios\\asp_servicios.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\asp_servicios\\controllers\\auditoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDED0D19-C1D7-4D00-916F-46849AB76A9A}|asp_servicios\\asp_servicios.csproj|solutionrelative:asp_servicios\\controllers\\auditoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDED0D19-C1D7-4D00-916F-46849AB76A9A}|asp_servicios\\asp_servicios.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\asp_servicios\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDED0D19-C1D7-4D00-916F-46849AB76A9A}|asp_servicios\\asp_servicios.csproj|solutionrelative:asp_servicios\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -33,16 +49,72 @@
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "lib_dominio.csproj",
-              "DocumentMoniker": "C:\\Users\\juand\\OneDrive\\Documentos\\2-ACADEMICO\\ITM\\2025-2\\3-Programaci\u00F3n de Software\\Entregable\\TerraLink_X\\lib_dominio\\lib_dominio.csproj",
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_repositorios\\Implementaciones\\Conexion.cs",
+              "RelativeDocumentMoniker": "lib_repositorios\\Implementaciones\\Conexion.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_repositorios\\Implementaciones\\Conexion.cs",
+              "RelativeToolTip": "lib_repositorios\\Implementaciones\\Conexion.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T15:26:40.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_servicios\\Startup.cs",
+              "RelativeDocumentMoniker": "asp_servicios\\Startup.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_servicios\\Startup.cs",
+              "RelativeToolTip": "asp_servicios\\Startup.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwCkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T15:25:04.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "lib_dominio",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_dominio\\lib_dominio.csproj",
               "RelativeDocumentMoniker": "lib_dominio\\lib_dominio.csproj",
-              "ToolTip": "C:\\Users\\juand\\OneDrive\\Documentos\\2-ACADEMICO\\ITM\\2025-2\\3-Programaci\u00F3n de Software\\Entregable\\TerraLink_X\\lib_dominio\\lib_dominio.csproj",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_dominio\\lib_dominio.csproj",
               "RelativeToolTip": "lib_dominio\\lib_dominio.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-19T03:51:42.592Z",
+              "WhenOpened": "2025-11-05T15:18:24.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TokenController.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_servicios\\Controllers\\TokenController.cs",
+              "RelativeDocumentMoniker": "asp_servicios\\Controllers\\TokenController.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_servicios\\Controllers\\TokenController.cs",
+              "RelativeToolTip": "asp_servicios\\Controllers\\TokenController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T15:04:01.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuditoriasController.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_servicios\\Controllers\\AuditoriasController.cs",
+              "RelativeDocumentMoniker": "asp_servicios\\Controllers\\AuditoriasController.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_servicios\\Controllers\\AuditoriasController.cs",
+              "RelativeToolTip": "asp_servicios\\Controllers\\AuditoriasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T14:58:51.637Z",
               "EditorCaption": ""
             }
           ]

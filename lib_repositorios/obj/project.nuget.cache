@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "mUQk8yAHLMI=",
   "success": true,
   "projectFilePath": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_repositorios\\lib_repositorios.csproj",
-=======
-  "dgSpecHash": "OuK0vvcqtdM=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\juand\\OneDrive\\Documentos\\2-ACADEMICO\\ITM\\2025-2\\3-Programación de Software\\Entregable\\TerraLink_X\\lib_repositorios\\lib_repositorios.csproj",
->>>>>>> a126649dabeb58103d688c40428dc32f7d2cbe44
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -94,5 +88,15 @@
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.21\\microsoft.netcore.app.ref.8.0.21.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.21\\microsoft.aspnetcore.app.ref.8.0.21.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problema al leer el archivo de caché C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_repositorios\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_repositorios\\lib_repositorios.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_repositorios\\lib_repositorios.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

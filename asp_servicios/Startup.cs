@@ -39,7 +39,8 @@ namespace asp_servicios
             services.AddScoped<IReservaServiciosAplicacion, ReservaServiciosAplicacion>();//13
             services.AddScoped<IServiciosExtrasAplicacion, ServiciosExtrasAplicacion>();//14
             services.AddScoped<ITareasAplicacion, TareasAplicacion>();//15
-       
+            services.AddScoped<TokenAplicacion>();
+
             // Controladores
             services.AddScoped<TokenController, TokenController>();
             services.AddCors(o => o.AddDefaultPolicy(b => b.AllowAnyOrigin()));

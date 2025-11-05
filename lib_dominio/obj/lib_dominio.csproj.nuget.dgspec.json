@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_dominio\\lib_dominio.csproj": {}
   },
   "projects": {
@@ -13,19 +12,6 @@
         "projectPath": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_dominio\\lib_dominio.csproj",
         "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_dominio\\obj\\",
-=======
-    "C:\\Users\\juand\\OneDrive\\Documentos\\2-ACADEMICO\\ITM\\2025-2\\3-Programación de Software\\Entregable\\TerraLink_X\\lib_dominio\\lib_dominio.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\juand\\OneDrive\\Documentos\\2-ACADEMICO\\ITM\\2025-2\\3-Programación de Software\\Entregable\\TerraLink_X\\lib_dominio\\lib_dominio.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\juand\\OneDrive\\Documentos\\2-ACADEMICO\\ITM\\2025-2\\3-Programación de Software\\Entregable\\TerraLink_X\\lib_dominio\\lib_dominio.csproj",
-        "projectName": "lib_dominio",
-        "projectPath": "C:\\Users\\juand\\OneDrive\\Documentos\\2-ACADEMICO\\ITM\\2025-2\\3-Programación de Software\\Entregable\\TerraLink_X\\lib_dominio\\lib_dominio.csproj",
-        "packagesPath": "C:\\Users\\juand\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\juand\\OneDrive\\Documentos\\2-ACADEMICO\\ITM\\2025-2\\3-Programación de Software\\Entregable\\TerraLink_X\\lib_dominio\\obj\\",
->>>>>>> a126649dabeb58103d688c40428dc32f7d2cbe44
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
