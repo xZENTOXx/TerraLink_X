@@ -1,7 +1,7 @@
 ﻿
 namespace lib_dominio.Entidades
 {
-    public class Reservas
+    public class Reservas : IEntidad
     {
         public int Id { get; set; }
         public required DateTime FechaInicio { get; set;}

@@ -1,7 +1,7 @@
 ﻿
 namespace lib_dominio.Entidades
 {
-    public class Inventarios
+    public class Inventarios : IEntidad
     {
         public int Id { get; set; }
         public int Finca { get; set; }

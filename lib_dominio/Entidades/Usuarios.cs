@@ -1,7 +1,7 @@
 ﻿
 namespace lib_dominio.Entidades
 {
-    public class Usuarios
+    public class Usuarios : IEntidad
     {
         public int Id { get; set; }
         public required string NombreUsuario { get; set; }

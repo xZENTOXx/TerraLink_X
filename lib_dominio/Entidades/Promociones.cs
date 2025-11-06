@@ -1,7 +1,7 @@
 ﻿
 namespace lib_dominio.Entidades
 {
-    public class Promociones
+    public class Promociones : IEntidad
     {
         public int Id { get; set; }
         public required string Nombre { get; set; }

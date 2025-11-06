@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-
+﻿
 namespace lib_repositorios.Interfaces
 {
     public interface IGenericoAplicacion<T> where T : class

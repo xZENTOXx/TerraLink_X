@@ -1,7 +1,7 @@
 ﻿
 namespace lib_dominio.Entidades
 {
-    public class Empleados
+    public class Empleados : IEntidad
     {
         public int Id { get; set; }
         public required string Nombre { get; set; }

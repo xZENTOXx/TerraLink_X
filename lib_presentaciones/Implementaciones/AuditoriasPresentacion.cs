@@ -1,0 +1,28 @@
+﻿using lib_dominio.Entidades;
+using lib_dominio.Nucleo;
+using lib_presentaciones.Implementaciones;
+
+namespace lib_presentaciones.Interfaces
+{
+    public class AuditoriasPresentacion : GenericoPresentacion<Auditorias>
+    {
+        public AuditoriasPresentacion(Comunicaciones comunicaciones) : base( "Auditorias",comunicaciones) { }
+        public async Task<List<Auditorias>> PorTipo(Auditorias? entidad)
+        {
+            var lista = new List<Auditorias>();
+
+            var datos = new Dictionary<string, object>();
+                datos["Entidad"] = entidad!;
+                datos = comunicaciones?.ConstruirUrl(datos, "Auditorias/PorTipo");
+            var respuesta = await comunicaciones!.Ejecutar(datos);
+
+            if (respuesta.ContainsKey("Error"))
+            {
+                throw new Exception(respuesta["Error"].ToString()!);
+            }
+            lista = JsonConversor.ConvertirAObjeto<List<Auditorias>>(
+                JsonConversor.ConvertirAString(respuesta["Entidades"]));
+            return lista;
+        }
+    }
+}

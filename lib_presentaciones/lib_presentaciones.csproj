@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\lib_dominio\lib_dominio.csproj" />
+    <None Include="Interfaces\IReservaPromocionesPresentacion.cs" />
+    <None Include="Interfaces\IReservasPresentacion.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Implementaciones\" />
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\lib_dominio\lib_dominio.csproj" />
   </ItemGroup>
 
 </Project>
