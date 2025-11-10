@@ -2,8 +2,8 @@
 
 namespace lib_presentaciones.Interfaces
 {
-    public interface IReseñasPresentacion : IGenericoPresentacion<Auditorias>
+    public interface IReseñasPresentacion : IGenericoPresentacion<Reseñas>
     {
-        Task<List<Auditorias>> PorCalificacion(Auditorias? entidad);
+        Task<List<Reseñas>> PorCalificacion(Reseñas? entidad);
     }
 }

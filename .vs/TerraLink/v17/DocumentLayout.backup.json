@@ -3,60 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\lib_presentaciones\\interfaces\\iserviciosextraspresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|solutionrelative:lib_presentaciones\\interfaces\\iserviciosextraspresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7BD6FE09-416D-44D0-9961-F81B5D8B8CB7}|asp_presentacion\\asp_presentacion.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\asp_presentacion\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7BD6FE09-416D-44D0-9961-F81B5D8B8CB7}|asp_presentacion\\asp_presentacion.csproj|solutionrelative:asp_presentacion\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\lib_presentaciones\\interfaces\\ireservaspresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|solutionrelative:lib_presentaciones\\interfaces\\ireservaspresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\lib_presentaciones\\interfaces\\ireservaserviciospresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|solutionrelative:lib_presentaciones\\interfaces\\ireservaserviciospresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\lib_presentaciones\\interfaces\\ireservapromocionespresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|solutionrelative:lib_presentaciones\\interfaces\\ireservapromocionespresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\lib_presentaciones\\interfaces\\ipromocionespresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|solutionrelative:lib_presentaciones\\interfaces\\ipromocionespresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\lib_presentaciones\\interfaces\\ipagospresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|solutionrelative:lib_presentaciones\\interfaces\\ipagospresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\lib_presentaciones\\interfaces\\imantenimientospresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|solutionrelative:lib_presentaciones\\interfaces\\imantenimientospresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\lib_presentaciones\\interfaces\\iinventariospresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|solutionrelative:lib_presentaciones\\interfaces\\iinventariospresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\lib_presentaciones\\interfaces\\ifincaspresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|solutionrelative:lib_presentaciones\\interfaces\\ifincaspresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\lib_presentaciones\\interfaces\\iempleadospresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|solutionrelative:lib_presentaciones\\interfaces\\iempleadospresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\lib_presentaciones\\interfaces\\iclientespresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|solutionrelative:lib_presentaciones\\interfaces\\iclientespresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\lib_presentaciones\\interfaces\\iauditoriaspresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|solutionrelative:lib_presentaciones\\interfaces\\iauditoriaspresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\lib_presentaciones\\implementaciones\\auditoriaspresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|solutionrelative:lib_presentaciones\\implementaciones\\auditoriaspresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F31BDFDE-DA17-4202-B870-42AA8A7C5F26}|lib_dominio\\lib_dominio.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\lib_dominio\\entidades\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F31BDFDE-DA17-4202-B870-42AA8A7C5F26}|lib_dominio\\lib_dominio.csproj|solutionrelative:lib_dominio\\entidades\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7BD6FE09-416D-44D0-9961-F81B5D8B8CB7}|asp_presentacion\\asp_presentacion.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\asp_presentacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BD6FE09-416D-44D0-9961-F81B5D8B8CB7}|asp_presentacion\\asp_presentacion.csproj|solutionrelative:asp_presentacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -71,183 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IServiciosExtrasPresentacion.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IServiciosExtrasPresentacion.cs",
-              "RelativeDocumentMoniker": "lib_presentaciones\\Interfaces\\IServiciosExtrasPresentacion.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IServiciosExtrasPresentacion.cs",
-              "RelativeToolTip": "lib_presentaciones\\Interfaces\\IServiciosExtrasPresentacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:26:17.228Z",
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_presentacion\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "asp_presentacion\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_presentacion\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "asp_presentacion\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-10T16:08:15.377Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IReservasPresentacion.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IReservasPresentacion.cs",
-              "RelativeDocumentMoniker": "lib_presentaciones\\Interfaces\\IReservasPresentacion.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IReservasPresentacion.cs",
-              "RelativeToolTip": "lib_presentaciones\\Interfaces\\IReservasPresentacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_presentacion\\Program.cs",
+              "RelativeDocumentMoniker": "asp_presentacion\\Program.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_presentacion\\Program.cs",
+              "RelativeToolTip": "asp_presentacion\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:26:14.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IReservaServiciosPresentacion.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IReservaServiciosPresentacion.cs",
-              "RelativeDocumentMoniker": "lib_presentaciones\\Interfaces\\IReservaServiciosPresentacion.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IReservaServiciosPresentacion.cs",
-              "RelativeToolTip": "lib_presentaciones\\Interfaces\\IReservaServiciosPresentacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:26:10.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IReservaPromocionesPresentacion.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IReservaPromocionesPresentacion.cs",
-              "RelativeDocumentMoniker": "lib_presentaciones\\Interfaces\\IReservaPromocionesPresentacion.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IReservaPromocionesPresentacion.cs",
-              "RelativeToolTip": "lib_presentaciones\\Interfaces\\IReservaPromocionesPresentacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:26:07.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IPromocionesPresentacion.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IPromocionesPresentacion.cs",
-              "RelativeDocumentMoniker": "lib_presentaciones\\Interfaces\\IPromocionesPresentacion.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IPromocionesPresentacion.cs",
-              "RelativeToolTip": "lib_presentaciones\\Interfaces\\IPromocionesPresentacion.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:25:59.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IPagosPresentacion.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IPagosPresentacion.cs",
-              "RelativeDocumentMoniker": "lib_presentaciones\\Interfaces\\IPagosPresentacion.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IPagosPresentacion.cs",
-              "RelativeToolTip": "lib_presentaciones\\Interfaces\\IPagosPresentacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:25:56.214Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IMantenimientosPresentacion.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IMantenimientosPresentacion.cs",
-              "RelativeDocumentMoniker": "lib_presentaciones\\Interfaces\\IMantenimientosPresentacion.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IMantenimientosPresentacion.cs",
-              "RelativeToolTip": "lib_presentaciones\\Interfaces\\IMantenimientosPresentacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:25:53.253Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IInventariosPresentacion.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IInventariosPresentacion.cs",
-              "RelativeDocumentMoniker": "lib_presentaciones\\Interfaces\\IInventariosPresentacion.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IInventariosPresentacion.cs",
-              "RelativeToolTip": "lib_presentaciones\\Interfaces\\IInventariosPresentacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:25:49.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IFincasPresentacion.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IFincasPresentacion.cs",
-              "RelativeDocumentMoniker": "lib_presentaciones\\Interfaces\\IFincasPresentacion.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IFincasPresentacion.cs",
-              "RelativeToolTip": "lib_presentaciones\\Interfaces\\IFincasPresentacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:25:42.175Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IEmpleadosPresentacion.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IEmpleadosPresentacion.cs",
-              "RelativeDocumentMoniker": "lib_presentaciones\\Interfaces\\IEmpleadosPresentacion.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IEmpleadosPresentacion.cs",
-              "RelativeToolTip": "lib_presentaciones\\Interfaces\\IEmpleadosPresentacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:25:39.667Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IClientesPresentacion.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IClientesPresentacion.cs",
-              "RelativeDocumentMoniker": "lib_presentaciones\\Interfaces\\IClientesPresentacion.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IClientesPresentacion.cs",
-              "RelativeToolTip": "lib_presentaciones\\Interfaces\\IClientesPresentacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:25:35.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IAuditoriasPresentacion.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IAuditoriasPresentacion.cs",
-              "RelativeDocumentMoniker": "lib_presentaciones\\Interfaces\\IAuditoriasPresentacion.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Interfaces\\IAuditoriasPresentacion.cs",
-              "RelativeToolTip": "lib_presentaciones\\Interfaces\\IAuditoriasPresentacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:25:29.748Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AuditoriasPresentacion.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Implementaciones\\AuditoriasPresentacion.cs",
-              "RelativeDocumentMoniker": "lib_presentaciones\\Implementaciones\\AuditoriasPresentacion.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Implementaciones\\AuditoriasPresentacion.cs",
-              "RelativeToolTip": "lib_presentaciones\\Implementaciones\\AuditoriasPresentacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:17:00.758Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Usuarios.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_dominio\\Entidades\\Usuarios.cs",
-              "RelativeDocumentMoniker": "lib_dominio\\Entidades\\Usuarios.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_dominio\\Entidades\\Usuarios.cs",
-              "RelativeToolTip": "lib_dominio\\Entidades\\Usuarios.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:15:40.973Z",
+              "WhenOpened": "2025-11-10T16:06:51.116Z",
               "EditorCaption": ""
             },
             {

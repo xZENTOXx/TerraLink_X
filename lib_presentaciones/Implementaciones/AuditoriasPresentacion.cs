@@ -1,13 +1,13 @@
 ﻿using lib_dominio.Entidades;
 using lib_dominio.Nucleo;
-using lib_presentaciones.Implementaciones;
+using lib_presentaciones.Interfaces;
 
-namespace lib_presentaciones.Interfaces
+namespace lib_presentaciones.Implementaciones
 {
-    public class AuditoriasPresentacion : GenericoPresentacion<Auditorias>
+    public class AuditoriasPresentacion : GenericoPresentacion<Auditorias>, IAuditoriasPresentacion
     {
         public AuditoriasPresentacion(Comunicaciones comunicaciones) : base( "Auditorias",comunicaciones) { }
-        public async Task<List<Auditorias>> PorTipo(Auditorias? entidad)
+        public async Task<List<Auditorias>> PorAccion(Auditorias? entidad)
         {
             var lista = new List<Auditorias>();
 
