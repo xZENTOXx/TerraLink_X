@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7BD6FE09-416D-44D0-9961-F81B5D8B8CB7}|asp_presentacion\\asp_presentacion.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\asp_presentacion\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{7BD6FE09-416D-44D0-9961-F81B5D8B8CB7}|asp_presentacion\\asp_presentacion.csproj|solutionrelative:asp_presentacion\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7BD6FE09-416D-44D0-9961-F81B5D8B8CB7}|asp_presentacion\\asp_presentacion.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\asp_presentacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7BD6FE09-416D-44D0-9961-F81B5D8B8CB7}|asp_presentacion\\asp_presentacion.csproj|solutionrelative:asp_presentacion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7BD6FE09-416D-44D0-9961-F81B5D8B8CB7}|asp_presentacion\\asp_presentacion.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\asp_presentacion\\pages\\ventanas\\fincas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BD6FE09-416D-44D0-9961-F81B5D8B8CB7}|asp_presentacion\\asp_presentacion.csproj|solutionrelative:asp_presentacion\\pages\\ventanas\\fincas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,34 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_presentacion\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "asp_presentacion\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_presentacion\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "asp_presentacion\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGUAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-10T16:08:15.377Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_presentacion\\Program.cs",
-              "RelativeDocumentMoniker": "asp_presentacion\\Program.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_presentacion\\Program.cs",
-              "RelativeToolTip": "asp_presentacion\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T16:06:51.116Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -65,6 +35,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Fincas.cshtml",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_presentacion\\Pages\\Ventanas\\Fincas.cshtml",
+              "RelativeDocumentMoniker": "asp_presentacion\\Pages\\Ventanas\\Fincas.cshtml",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_presentacion\\Pages\\Ventanas\\Fincas.cshtml",
+              "RelativeToolTip": "asp_presentacion\\Pages\\Ventanas\\Fincas.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T14:27:26.328Z",
+              "EditorCaption": ""
             }
           ]
         }
