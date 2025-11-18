@@ -1,4 +1,5 @@
-﻿using lib_presentaciones.Implementaciones;
+﻿using lib_presentaciones;
+using lib_presentaciones.Implementaciones;
 using lib_presentaciones.Interfaces;
 
 namespace asp_presentacion
@@ -30,6 +31,7 @@ namespace asp_presentacion
             services.AddScoped<IServiciosExtrasPresentacion, ServiciosExtrasPresentacion>();
             services.AddScoped<ITareasPresentacion, TareasPresentacion>();
             services.AddScoped<IUsuariosPresentacion, UsuariosPresentacion>();
+            services.AddScoped<Comunicaciones, Comunicaciones>();
             services.AddControllers();
             services.AddEndpointsApiExplorer();
             services.AddRazorPages();

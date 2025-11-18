@@ -7,14 +7,14 @@ namespace lib_presentaciones
         private string? URL = string.Empty,
             llave = null;
 
-        public Comunicaciones(string url = "http://localhost:5080/")
+        public Comunicaciones(string url = "http://localhost:5175/")
         {
             URL = url;
         }
 
         public Dictionary<string, object> ConstruirUrl(Dictionary<string, object> data, string Metodo)
         {
-            data["Url"] = URL + Metodo;
+             data["Url"] = URL + Metodo;
             data["UrlLlave"] = URL + "Token/Llave";
             return data;
         }
@@ -78,8 +78,8 @@ namespace lib_presentaciones
                 var temp = new Dictionary<string, object>();
                 temp["Entidad"] = new Dictionary<string, object>()
                 {
-                    { "Nombre", "Pepito@email.com" },
-                    { "Contraseña", "JHGjkhtu6387456yssdf" }
+                    { "NombreUsuario", "Sebastian Bedoya Mejia" },
+                    { "Clave", "sebas123" }
                 };
                 var stringData = JsonConversor.ConvertirAString(temp);
 

@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7BD6FE09-416D-44D0-9961-F81B5D8B8CB7}|asp_presentacion\\asp_presentacion.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\asp_presentacion\\pages\\ventanas\\fincas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7BD6FE09-416D-44D0-9961-F81B5D8B8CB7}|asp_presentacion\\asp_presentacion.csproj|solutionrelative:asp_presentacion\\pages\\ventanas\\fincas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|c:\\users\\usuario\\onedrive\\desktop\\terralink_x\\lib_presentaciones\\implementaciones\\genericopresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABAC83AE-1C5B-4248-B060-FF835F5D2AD8}|lib_presentaciones\\lib_presentaciones.csproj|solutionrelative:lib_presentaciones\\implementaciones\\genericopresentacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,14 +39,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Fincas.cshtml",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_presentacion\\Pages\\Ventanas\\Fincas.cshtml",
-              "RelativeDocumentMoniker": "asp_presentacion\\Pages\\Ventanas\\Fincas.cshtml",
-              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\asp_presentacion\\Pages\\Ventanas\\Fincas.cshtml",
-              "RelativeToolTip": "asp_presentacion\\Pages\\Ventanas\\Fincas.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-11T14:27:26.328Z",
+              "Title": "GenericoPresentacion.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Implementaciones\\GenericoPresentacion.cs",
+              "RelativeDocumentMoniker": "lib_presentaciones\\Implementaciones\\GenericoPresentacion.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\Implementaciones\\GenericoPresentacion.cs",
+              "RelativeToolTip": "lib_presentaciones\\Implementaciones\\GenericoPresentacion.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAiwFsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T22:42:30.57Z",
               "EditorCaption": ""
             }
           ]

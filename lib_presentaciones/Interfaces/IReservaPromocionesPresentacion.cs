@@ -4,6 +4,6 @@ namespace lib_presentaciones.Interfaces
 {
     public interface IReservaPromocionesPresentacion : IGenericoPresentacion<ReservaPromociones>
     {
-        Task<List<Auditorias>> PorPromocion(Auditorias? entidad);
+        Task<List<ReservaPromociones>> PorPromocion(ReservaPromociones? entidad);
     }
 }

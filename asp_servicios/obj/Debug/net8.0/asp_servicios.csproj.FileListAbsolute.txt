@@ -21,7 +21,6 @@ C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\asp_servicios\obj\Debug\net8.0\sta
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\asp_servicios\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\asp_servicios\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\asp_servicios\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\asp_servicios\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\asp_servicios\obj\Debug\net8.0\asp_servicios.dll
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\asp_servicios\obj\Debug\net8.0\refint\asp_servicios.dll
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\asp_servicios\obj\Debug\net8.0\asp_servicios.pdb
