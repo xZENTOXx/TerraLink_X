@@ -1,5 +1,4 @@
-﻿
-namespace lib_dominio.Entidades
+﻿namespace lib_dominio.Entidades
 {
     public class Mantenimientos : IEntidad
     {

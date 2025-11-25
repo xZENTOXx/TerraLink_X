@@ -17,6 +17,14 @@ namespace lib_repositorios.Implementaciones
             .Take(50)
             .ToList();
         }
+        public List<Clientes> PorDocumento(Clientes entidad)
+        {
+            return this.IConexion!.Clientes!
+                .Where(x => x.Documento.Contains(entidad.Documento))
+                .Take(50)
+                .ToList();
+        }
+
 
     }
 }

@@ -3,52 +3,81 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["¡Hola!"]</title>
+    <title>@ViewData["Titulo"] - TerraLink</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/asp_presentacion.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/layout.css" />
+
+
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">asp_presentacion</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Ventanas/Fincas">Fincas</a>
-                        </li>
-                    </ul>
-                </div>
+<body class="@(Context.Session.GetString("Usuario") != null ? "logged-in" : "not-logged")">
+
+    @if (Context.Session.GetString("Usuario") != null)
+    {
+        <!-- SIDEBAR -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                TerraLink
             </div>
-        </nav>
-    </header>
-    <div class="container">
+
+            <a asp-page="/Index">Dashboard</a>
+
+            <hr style="background:#4B5563" />
+
+            <strong class="px-3">Gestión Principal</strong>
+            <a asp-page="/Ventanas/Fincas">Fincas</a>
+            <a asp-page="/Ventanas/Clientes">Clientes</a>
+            <a asp-page="/Ventanas/Empleados">Empleados</a>
+
+            <hr style="background:#4B5563" />
+
+            <strong class="px-3">Reservas</strong>
+            <a asp-page="/Ventanas/Reservas">Reservas</a>
+            <a asp-page="/Ventanas/ServiciosExtras">Servicios Extras</a>
+            <a asp-page="/Ventanas/ReservaServicios">Reserva - Servicios</a>
+            <a asp-page="/Ventanas/Promociones">Promociones</a>
+            <a asp-page="/Ventanas/ReservaPromociones">Reserva - Promociones</a>
+
+            <hr style="background:#4B5563" />
+
+            <strong class="px-3">Operaciones</strong>
+            <a asp-page="/Ventanas/Inventarios">Inventarios</a>
+            <a asp-page="/Ventanas/Mantenimientos">Mantenimientos</a>
+            <a asp-page="/Ventanas/Tareas">Tareas</a>
+            <a asp-page="/Ventanas/Pagos">Pagos</a>
+
+            <hr style="background:#4B5563" />
+
+            <strong class="px-3">Sistema</strong>
+            <a asp-page="/Ventanas/Usuarios">Usuarios</a>
+            <a asp-page="/Ventanas/Auditorias">Auditorías</a>
+
+            <hr style="background:#4B5563" />
+
+            <a asp-page="/Logout">Cerrar Sesión</a>
+        </div>
+
+        <!-- HAMBURGER MENU -->
+        <span class="menu-btn" onclick="toggleSidebar()">&#9776;</span>
+    }
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - TerraLink - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+    </script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

@@ -13,7 +13,7 @@ namespace lib_presentaciones.Implementaciones
 
             var datos = new Dictionary<string, object>();
             datos["Entidad"] = entidad!;
-            datos = comunicaciones?.ConstruirUrl(datos, "Empleados/PorTipo");
+            datos = comunicaciones!.ConstruirUrl(datos, "Empleados/PorCargo");
             var respuesta = await comunicaciones!.Ejecutar(datos);
 
             if (respuesta.ContainsKey("Error"))
@@ -24,5 +24,24 @@ namespace lib_presentaciones.Implementaciones
                 JsonConversor.ConvertirAString(respuesta["Entidades"]));
             return lista;
         }
+        public async Task<List<Empleados>> PorTelefono(Empleados? entidad)
+        {
+            var lista = new List<Empleados>();
+
+            var datos = new Dictionary<string, object>();
+            datos["Entidad"] = entidad!;
+
+            datos = comunicaciones!.ConstruirUrl(datos, "Empleados/PorTelefono");
+            var respuesta = await comunicaciones!.Ejecutar(datos);
+
+            if (respuesta.ContainsKey("Error"))
+                throw new Exception(respuesta["Error"].ToString()!);
+
+            lista = JsonConversor.ConvertirAObjeto<List<Empleados>>(
+                JsonConversor.ConvertirAString(respuesta["Entidades"]));
+
+            return lista;
+        }
+
     }
 }

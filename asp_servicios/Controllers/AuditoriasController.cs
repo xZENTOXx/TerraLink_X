@@ -37,5 +37,52 @@ namespace asp_servicios.Controllers
                 return JsonConversor.ConvertirAString(respuesta);
             }
         }
+
+        [HttpPost]
+        public string PorUsuario()
+        {
+            var respuesta = new Dictionary<string, object>();
+            try
+            {
+                var datos = ObtenerDatos();
+                var idUsuario = Convert.ToInt32(datos["IdUsuario"]);
+
+                this.iAplicacion!.Configurar(Configuracion.ObtenerValor("StringConexion"));
+                respuesta["Entidades"] = this.iAplicacion!.PorUsuario(idUsuario);
+
+                respuesta["Respuesta"] = "OK";
+                respuesta["Fecha"] = DateTime.Now.ToString();
+                return JsonConversor.ConvertirAString(respuesta);
+            }
+            catch (Exception ex)
+            {
+                respuesta["Error"] = ex.Message.ToString();
+                return JsonConversor.ConvertirAString(respuesta);
+            }
+        }
+
+        [HttpPost]
+        public string PorFecha()
+        {
+            var respuesta = new Dictionary<string, object>();
+            try
+            {
+                var datos = ObtenerDatos();
+                var fecha = Convert.ToDateTime(datos["Fecha"]);
+
+                this.iAplicacion!.Configurar(Configuracion.ObtenerValor("StringConexion"));
+                respuesta["Entidades"] = this.iAplicacion!.PorFecha(fecha);
+
+                respuesta["Respuesta"] = "OK";
+                respuesta["Fecha"] = DateTime.Now.ToString();
+                return JsonConversor.ConvertirAString(respuesta);
+            }
+            catch (Exception ex)
+            {
+                respuesta["Error"] = ex.Message.ToString();
+                return JsonConversor.ConvertirAString(respuesta);
+            }
+        }
+
     }
 }

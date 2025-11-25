@@ -1,0 +1,129 @@
+﻿/* ============================================================
+   SIDEBAR RESPONSIVO - TERRALINK
+   ============================================================ */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #1F2937;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 70px;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    position: fixed;
+    top: 0;
+    width: 250px;
+    background: #111827;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.sidebar a {
+    color: #D1D5DB;
+    padding: 12px 20px;
+    display: block;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+    .sidebar a:hover {
+        background: #374151;
+        color: white;
+    }
+
+.sidebar strong {
+    color: #9CA3AF;
+    font-size: 13px;
+    display: block;
+    padding: 7px 20px;
+    margin-top: 10px;
+}
+
+.sidebar hr {
+    border-color: #4B5563;
+    opacity: 0.4;
+    margin: 10px 0;
+}
+
+/* ============================================================
+   CONTENIDO PRINCIPAL
+   ============================================================ */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: all .3s ease;
+}
+
+.sidebar.active ~ .content {
+    margin-left: 0;
+}
+
+/* LOGIN */
+.login-container {
+    max-width: 450px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media(max-width: 768px) {
+    .sidebar {
+        left: -250px;
+    }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .menu-btn {
+        display: inline-block !important;
+    }
+}
+
+/* ============================================================
+   MENÚ HAMBURGUESA
+   ============================================================ */
+
+.menu-btn {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #111827;
+    margin: 10px;
+    z-index: 1100;
+}
+
+/* SIN LOGIN */
+.not-logged .content {
+    margin-left: 0 !important;
+    padding: 20px;
+}
+
+.not-logged .menu-btn {
+    display: none !important;
+}

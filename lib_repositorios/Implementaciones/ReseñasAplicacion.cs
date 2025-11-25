@@ -16,5 +16,13 @@ namespace lib_repositorios.Implementaciones
                 .Take(50)
                 .ToList();
         }
+        public List<Reseñas> PorFecha(Reseñas? entidad)
+        {
+            return this.IConexion!.Reseñas!
+                .Where(x => x.Fecha.Date == entidad!.Fecha.Date)
+                .Take(50)
+                .ToList();
+        }
+
     }
 }

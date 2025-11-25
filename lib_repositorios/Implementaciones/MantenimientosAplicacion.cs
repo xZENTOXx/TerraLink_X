@@ -16,5 +16,14 @@ namespace lib_repositorios.Implementaciones
             .Take(50)
             .ToList();
         }
+
+        public List<Mantenimientos> PorFecha(Mantenimientos? entidad)
+        {
+            return this.IConexion!.Mantenimientos!
+                .Where(x => x.Fecha.Date == entidad!.Fecha.Date)
+                .Take(50)
+                .ToList();
+        }
+
     }
 }

@@ -13,7 +13,7 @@ namespace lib_presentaciones.Implementaciones
 
             var datos = new Dictionary<string, object>();
             datos["Entidad"] = entidad!;
-            datos = comunicaciones?.ConstruirUrl(datos, "ReservaServicios/PorTipo");
+            datos = comunicaciones!.ConstruirUrl(datos, "ReservaServicios/PorServicio");
             var respuesta = await comunicaciones!.Ejecutar(datos);
 
             if (respuesta.ContainsKey("Error"))

@@ -5,6 +5,8 @@ namespace lib_repositorios.Interfaces
     public interface IEmpleadosAplicacion : IGenericoAplicacion<Empleados>
     {
         List<Empleados> PorCargo(Empleados? entidad);
+        List<Empleados> PorTelefono(Empleados? entidad);
+
 
     }
 }

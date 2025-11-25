@@ -1,0 +1,71 @@
+﻿@page
+@model asp_presentacion.Pages.Ventanas.AuditoriasModel
+@{
+    ViewData["Titulo"] = "Auditorías";
+}
+<center>
+    <div>
+        <form method="POST">
+            @Html.AntiForgeryToken()
+
+            <h3 align="left">Auditorías del Sistema</h3>
+
+            <div align="left" class="bt_panel_buttons">
+                <input type="submit" value="Refrescar" asp-page-handler="BtRefrescar"
+                       class="btn btn-secondary"
+                       disabled="@(Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
+            </div>
+
+            <br />
+
+            <!-- FILTROS -->
+            <div class="form-group">
+                <label>Acción:</label>
+                <input class="cts_forms form-control" asp-for="Filtro!.Accion"
+                       placeholder="Insertar, Modificar, Borrar" />
+            </div>
+
+            <div class="form-group">
+                <label>ID Usuario:</label>
+                <input class="cts_forms form-control" asp-for="FiltroUsuario"
+                       placeholder="Ej: 3" />
+            </div>
+
+            <div class="form-group">
+                <label>Fecha:</label>
+                <input type="date" class="cts_forms form-control" asp-for="FiltroFecha" />
+            </div>
+
+            <br />
+
+            <!-- TABLA -->
+            <div class="containers_vn panel panel-default">
+                <table class="tb_data table table-striped table-bordered table-hover">
+                    <tr>
+                        <th>ID</th>
+                        <th>Usuario</th>
+                        <th>Acción</th>
+                        <th>Tabla Afectada</th>
+                        <th>ID Registro</th>
+                        <th>Fecha</th>
+                    </tr>
+
+                    @if (Model.Lista != null)
+                    {
+                        foreach (var a in Model.Lista)
+                        {
+                            <tr>
+                                <td>@a.Id</td>
+                                <td>@a._Usuario?.NombreUsuario</td>
+                                <td>@a.Accion</td>
+                                <td>@a.TablaAfectada</td>
+                                <td>@a.IdRegistroAfectado</td>
+                                <td>@a.Fecha.ToString("yyyy-MM-dd HH:mm")</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+        </form>
+    </div>
+</center>

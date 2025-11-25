@@ -29,31 +29,35 @@ namespace asp_presentacion.Pages
                 LogConversor.Log(ex, ViewData!);
             }
         }
-        public void OnPostBtEnter()
+        public IActionResult OnPostBtEnter()
         {
             try
             {
-                if (string.IsNullOrEmpty(Email) &&
-                string.IsNullOrEmpty(Contrasena))
+                if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Contrasena))
                 {
                     OnPostBtClean();
-                    return;
+                    return Page();
                 }
+
                 if ("admin.123" != Email + "." + Contrasena)
                 {
                     OnPostBtClean();
-                    return;
+                    return Page();
                 }
-                ViewData["Logged"] = true;
+
+                // Guardar sesión
                 HttpContext.Session.SetString("Usuario", Email!);
-                EstaLogueado = true;
-                OnPostBtClean();
+
+                // REDIRECCIÓN OBLIGATORIA
+                return RedirectToPage("/Index");
             }
             catch (Exception ex)
             {
                 LogConversor.Log(ex, ViewData!);
+                return Page();
             }
         }
+
         public void OnPostBtClose()
         {
             try
