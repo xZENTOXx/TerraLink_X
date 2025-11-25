@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/layout.css" />
-
-
 </head>
+
+@functions {
+        public string IsActive(string route)
+        {
+                var current = Context.Request.Path.ToString().ToLower();
+                return current.StartsWith(route.ToLower()) ? "active" : "";
+        }
+}
+
 <body class="@(Context.Session.GetString("Usuario") != null ? "logged-in" : "not-logged")">
 
     @if (Context.Session.GetString("Usuario") != null)
@@ -21,37 +28,37 @@
                 TerraLink
             </div>
 
-            <a asp-page="/Index">Dashboard</a>
+            <a asp-page="/Index" class="@IsActive("/Index")">Dashboard</a>
 
             <hr style="background:#4B5563" />
 
             <strong class="px-3">Gestión Principal</strong>
-            <a asp-page="/Ventanas/Fincas">Fincas</a>
-            <a asp-page="/Ventanas/Clientes">Clientes</a>
-            <a asp-page="/Ventanas/Empleados">Empleados</a>
+            <a asp-page="/Ventanas/Fincas" class="@IsActive("/Ventanas/Fincas")">Fincas</a>
+            <a asp-page="/Ventanas/Clientes" class="@IsActive("/Ventanas/Clientes")">Clientes</a>
+            <a asp-page="/Ventanas/Empleados" class="@IsActive("/Ventanas/Empleados")">Empleados</a>
 
             <hr style="background:#4B5563" />
 
             <strong class="px-3">Reservas</strong>
-            <a asp-page="/Ventanas/Reservas">Reservas</a>
-            <a asp-page="/Ventanas/ServiciosExtras">Servicios Extras</a>
-            <a asp-page="/Ventanas/ReservaServicios">Reserva - Servicios</a>
-            <a asp-page="/Ventanas/Promociones">Promociones</a>
-            <a asp-page="/Ventanas/ReservaPromociones">Reserva - Promociones</a>
+            <a asp-page="/Ventanas/Reservas" class="@IsActive("/Ventanas/Reservas")">Reservas</a>
+            <a asp-page="/Ventanas/ServiciosExtras" class="@IsActive("/Ventanas/ServiciosExtras")">Servicios Extras</a>
+            <a asp-page="/Ventanas/ReservasServicios" class="@IsActive("/Ventanas/ReservasServicios")">Reserva - Servicios</a>
+            <a asp-page="/Ventanas/Promociones" class="@IsActive("/Ventanas/Promociones")">Promociones</a>
+            <a asp-page="/Ventanas/ReservaPromociones" class="@IsActive("/Ventanas/ReservaPromociones")">Reserva - Promociones</a>
 
             <hr style="background:#4B5563" />
 
             <strong class="px-3">Operaciones</strong>
-            <a asp-page="/Ventanas/Inventarios">Inventarios</a>
-            <a asp-page="/Ventanas/Mantenimientos">Mantenimientos</a>
-            <a asp-page="/Ventanas/Tareas">Tareas</a>
-            <a asp-page="/Ventanas/Pagos">Pagos</a>
+            <a asp-page="/Ventanas/Inventarios" class="@IsActive("/Ventanas/Inventarios")">Inventarios</a>
+            <a asp-page="/Ventanas/Mantenimientos" class="@IsActive("/Ventanas/Mantenimientos")">Mantenimientos</a>
+            <a asp-page="/Ventanas/Tareas" class="@IsActive("/Ventanas/Tareas")">Tareas</a>
+            <a asp-page="/Ventanas/Pagos" class="@IsActive("/Ventanas/Pagos")">Pagos</a>
 
             <hr style="background:#4B5563" />
 
             <strong class="px-3">Sistema</strong>
-            <a asp-page="/Ventanas/Usuarios">Usuarios</a>
-            <a asp-page="/Ventanas/Auditorias">Auditorías</a>
+            <a asp-page="/Ventanas/Usuarios" class="@IsActive("/Ventanas/Usuarios")">Usuarios</a>
+            <a asp-page="/Ventanas/Auditorias" class="@IsActive("/Ventanas/Auditorias")">Auditorías</a>
 
             <hr style="background:#4B5563" />
 
@@ -62,7 +69,6 @@
         <span class="menu-btn" onclick="toggleSidebar()">&#9776;</span>
     }
 
-    <!-- MAIN CONTENT -->
     <div class="content">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -78,6 +84,6 @@
     </script>
 
     @await RenderSectionAsync("Scripts", required: false)
-</body>
 
+</body>
 </html>

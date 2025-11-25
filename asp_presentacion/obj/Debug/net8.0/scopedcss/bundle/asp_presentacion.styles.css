@@ -57,6 +57,13 @@ body[b-aeimnrexz7] {
         color: white;
     }
 
+    .sidebar a.active[b-aeimnrexz7] {
+        background: #2563EB !important;
+        color: white !important;
+        font-weight: bold;
+    }
+
+
 .sidebar strong[b-aeimnrexz7] {
     color: #9CA3AF;
     font-size: 13px;

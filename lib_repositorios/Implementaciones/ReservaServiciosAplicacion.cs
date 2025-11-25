@@ -11,10 +11,12 @@ namespace lib_repositorios.Implementaciones
         {
             if (entidad == null)
                 throw new Exception("lbFaltaInformacion");
+
             return this.IConexion!.ReservaServicios!
                 .Where(x => x.Servicio == entidad.Servicio)
                 .Take(50)
                 .ToList();
         }
+
     }
 }

@@ -56,6 +56,13 @@ body {
         color: white;
     }
 
+    .sidebar a.active {
+        background: #2563EB !important;
+        color: white !important;
+        font-weight: bold;
+    }
+
+
 .sidebar strong {
     color: #9CA3AF;
     font-size: 13px;
