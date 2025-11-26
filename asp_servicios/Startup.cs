@@ -12,14 +12,24 @@ namespace asp_servicios
             Configuration = configuration;
         }
         public static IConfiguration? Configuration { set; get; }
-        public void ConfigureServices(WebApplicationBuilder builder, IServiceCollection
-       services)
+        public void ConfigureServices(WebApplicationBuilder builder, IServiceCollection services)
         {
-            services.Configure<KestrelServerOptions>(x => {
+            services.Configure<KestrelServerOptions>(x =>
+            {
                 x.AllowSynchronousIO = true;
             });
-            services.Configure<IISServerOptions>(x => { x.AllowSynchronousIO = true; });
-            services.AddControllers();
+
+            services.Configure<IISServerOptions>(x =>
+            {
+                x.AllowSynchronousIO = true;
+            });
+
+
+            services.AddControllers().AddNewtonsoftJson(options =>
+                {
+                    options.SerializerSettings.ReferenceLoopHandling =
+                             Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                });
             services.AddEndpointsApiExplorer();
             //services.AddSwaggerGen();
             // Repositorios
@@ -45,6 +55,7 @@ namespace asp_servicios
             services.AddScoped<TokenController, TokenController>();
             services.AddCors(o => o.AddDefaultPolicy(b => b.AllowAnyOrigin()));
         }
+
         public void Configure(WebApplication app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

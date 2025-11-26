@@ -1,4 +1,4 @@
-/* 
+Ôªø/* 
    - Creacion BD db_TerraLink
    - Creacion 15 tablas con menos de 10 campos cada una
    - Insertar 5 registros por tabla
@@ -14,6 +14,7 @@ IF DB_ID('db_TerraLink') IS NULL
 GO
 USE db_TerraLink;
 GO
+
 
 /* 2) TABLAS (15) */
 
@@ -149,16 +150,16 @@ CREATE TABLE dbo.Tareas(
  CONSTRAINT FK_Tareas_Fincas    FOREIGN KEY ([Finca])    REFERENCES dbo.Fincas([Id])
 );
 
--- 14. ReseÒas
-CREATE TABLE dbo.[ReseÒas](
+-- 14. Rese√±as
+CREATE TABLE dbo.[Rese√±as](
  [Id] INT IDENTITY(1,1) PRIMARY KEY,
  [Finca] INT NOT NULL,
  [Cliente] INT NOT NULL,
  [Calificacion] INT NOT NULL CHECK (Calificacion BETWEEN 1 AND 5),
  [Comentario] NVARCHAR(300),
  [Fecha] DATE NOT NULL DEFAULT CAST(GETDATE() AS DATE),
- CONSTRAINT FK_ReseÒas_Fincas   FOREIGN KEY ([Finca])  REFERENCES dbo.Fincas([Id]),
- CONSTRAINT FK_ReseÒas_Clientes FOREIGN KEY ([Cliente]) REFERENCES dbo.Clientes([Id])
+ CONSTRAINT FK_Rese√±as_Fincas   FOREIGN KEY ([Finca])  REFERENCES dbo.Fincas([Id]),
+ CONSTRAINT FK_Rese√±as_Clientes FOREIGN KEY ([Cliente]) REFERENCES dbo.Clientes([Id])
 );
 
 -- 15. Auditoria
@@ -172,13 +173,98 @@ CREATE TABLE dbo.Auditorias(
  CONSTRAINT FK_Auditoria_Usuarios FOREIGN KEY ([Usuario]) REFERENCES dbo.Usuarios([Id])
 );
 
--- 3) CHECKS e ÕNDICES simples (nivel b·sico)
+-- 3) CHECKS e √çNDICES simples (nivel b√°sico)
 ALTER TABLE dbo.Reservas ADD CONSTRAINT CK_Reservas_Fechas CHECK (FechaFin > FechaInicio);
 ALTER TABLE dbo.Reservas ADD CONSTRAINT CK_Reservas_Total  CHECK (Total >= 0);
 ALTER TABLE dbo.Pagos    ADD CONSTRAINT CK_Pagos_Monto     CHECK (Monto > 0);
 
 CREATE UNIQUE INDEX UX_Clientes_Correo    ON dbo.Clientes(Correo);
 CREATE UNIQUE INDEX UX_Clientes_Documento ON dbo.Clientes(Documento);
+
+ALTER TABLE dbo.Reservas
+DROP CONSTRAINT FK_Reservas_Fincas;
+ALTER TABLE dbo.Reservas
+ADD CONSTRAINT FK_Reservas_Fincas 
+FOREIGN KEY (Finca) REFERENCES dbo.Fincas(Id) ON DELETE CASCADE;
+
+ALTER TABLE dbo.Reservas
+DROP CONSTRAINT FK_Reservas_Clientes;
+ALTER TABLE dbo.Reservas
+ADD CONSTRAINT FK_Reservas_Clientes
+FOREIGN KEY (Cliente) REFERENCES dbo.Clientes(Id) ON DELETE CASCADE;
+
+-- PAGOS ‚Üí RESERVAS
+ALTER TABLE dbo.Pagos
+DROP CONSTRAINT FK_Pagos_Reservas;
+ALTER TABLE dbo.Pagos
+ADD CONSTRAINT FK_Pagos_Reservas
+FOREIGN KEY (Reserva) REFERENCES dbo.Reservas(Id) ON DELETE CASCADE;
+
+-- RESERVASERVICIOS ‚Üí RESERVAS / SERVICIOSEXTRAS
+ALTER TABLE dbo.ReservaServicios
+DROP CONSTRAINT FK_ReservaServicios_Reservas;
+ALTER TABLE dbo.ReservaServicios
+ADD CONSTRAINT FK_ReservaServicios_Reservas
+FOREIGN KEY (Reserva) REFERENCES dbo.Reservas(Id) ON DELETE CASCADE;
+
+ALTER TABLE dbo.ReservaServicios
+DROP CONSTRAINT FK_ReservaServicios_Servicios;
+ALTER TABLE dbo.ReservaServicios
+ADD CONSTRAINT FK_ReservaServicios_Servicios
+FOREIGN KEY (Servicio) REFERENCES dbo.ServiciosExtras(Id) ON DELETE CASCADE;
+
+-- RESERVAPROMOCIONES ‚Üí RESERVAS / PROMOCIONES
+ALTER TABLE dbo.ReservaPromociones
+DROP CONSTRAINT FK_ReservaPromociones_Reservas;
+ALTER TABLE dbo.ReservaPromociones
+ADD CONSTRAINT FK_ReservaPromociones_Reservas
+FOREIGN KEY (Reserva) REFERENCES dbo.Reservas(Id) ON DELETE CASCADE;
+
+ALTER TABLE dbo.ReservaPromociones
+DROP CONSTRAINT FK_ReservaPromociones_Promociones;
+ALTER TABLE dbo.ReservaPromociones
+ADD CONSTRAINT FK_ReservaPromociones_Promociones
+FOREIGN KEY (Promocion) REFERENCES dbo.Promociones(Id) ON DELETE CASCADE;
+
+-- INVENTARIOS ‚Üí FINCAS
+ALTER TABLE dbo.Inventarios
+DROP CONSTRAINT FK_Inventarios_Fincas;
+ALTER TABLE dbo.Inventarios
+ADD CONSTRAINT FK_Inventarios_Fincas
+FOREIGN KEY (Finca) REFERENCES dbo.Fincas(Id) ON DELETE CASCADE;
+
+-- MANTENIMIENTOS ‚Üí FINCAS
+ALTER TABLE dbo.Mantenimientos
+DROP CONSTRAINT FK_Mantenimientos_Fincas;
+ALTER TABLE dbo.Mantenimientos
+ADD CONSTRAINT FK_Mantenimientos_Fincas
+FOREIGN KEY (Finca) REFERENCES dbo.Fincas(Id) ON DELETE CASCADE;
+
+-- TAREAS ‚Üí EMPLEADOS / FINCAS
+ALTER TABLE dbo.Tareas
+DROP CONSTRAINT FK_Tareas_Empleados;
+ALTER TABLE dbo.Tareas
+ADD CONSTRAINT FK_Tareas_Empleados
+FOREIGN KEY (Empleado) REFERENCES dbo.Empleados(Id) ON DELETE CASCADE;
+
+ALTER TABLE dbo.Tareas
+DROP CONSTRAINT FK_Tareas_Fincas;
+ALTER TABLE dbo.Tareas
+ADD CONSTRAINT FK_Tareas_Fincas
+FOREIGN KEY (Finca) REFERENCES dbo.Fincas(Id) ON DELETE CASCADE;
+
+-- RESE√ëAS ‚Üí FINCAS / CLIENTES
+ALTER TABLE dbo.[Rese√±as]
+DROP CONSTRAINT FK_Rese√±as_Fincas;
+ALTER TABLE dbo.[Rese√±as]
+ADD CONSTRAINT FK_Rese√±as_Fincas
+FOREIGN KEY (Finca) REFERENCES dbo.Fincas(Id) ON DELETE CASCADE;
+
+ALTER TABLE dbo.[Rese√±as]
+DROP CONSTRAINT FK_Rese√±as_Clientes;
+ALTER TABLE dbo.[Rese√±as]
+ADD CONSTRAINT FK_Rese√±as_Clientes
+FOREIGN KEY (Cliente) REFERENCES dbo.Clientes(Id) ON DELETE CASCADE;
 
 /* ============ INSERT INTO ============ */
 
@@ -201,16 +287,16 @@ INSERT INTO [Clientes] ([Nombre], [Apellido], [Correo], [Telefono], [Documento])
 -- FINCAS
 INSERT INTO [Fincas] ([Nombre], [Ubicacion], [Capacidad], [Descripcion], [PrecioBase], [Estado]) VALUES
 ('Finca El Retiro','El Retiro - Antioquia',60,'Finca campestre con lago',180000.0000,1),
-('Finca La Ceja','La Ceja - Antioquia',40,'CabaÒas familiares',150000.0000,1),
-('Finca GuatapÈ Vista','GuatapÈ - Antioquia',80,'Vista al embalse',250000.0000,1),
-('Finca JardÌn CafÈ','JardÌn - Antioquia',35,'Ambiente cafetero',130000.0000,1),
-('Finca Santa Elena','Santa Elena - MedellÌn',50,'Bosque de niebla',170000.0000,1);
+('Finca La Ceja','La Ceja - Antioquia',40,'Caba√±as familiares',150000.0000,1),
+('Finca Guatap√© Vista','Guatap√© - Antioquia',80,'Vista al embalse',250000.0000,1),
+('Finca Jard√≠n Caf√©','Jard√≠n - Antioquia',35,'Ambiente cafetero',130000.0000,1),
+('Finca Santa Elena','Santa Elena - Medell√≠n',50,'Bosque de niebla',170000.0000,1);
 
 -- EMPLEADOS
 INSERT INTO [Empleados] ([Nombre], [Apellido], [Cargo], [Telefono], [Correo]) VALUES
 ('Sofia','Perez','Recepcion','3110000001','sofia.recep@terralink.com'),
 ('Mateo','Ramirez','Mantenimiento','3110000002','mateo.mnto@terralink.com'),
-('Valeria','LondoÒo','Ventas','3110000003','valeria.ventas@terralink.com'),
+('Valeria','Londo√±o','Ventas','3110000003','valeria.ventas@terralink.com'),
 ('Andres','Guerra','Aseo','3110000004','andres.aseo@terralink.com'),
 ('Camila','Aristizabal','Guia','3110000005','camila.guia@terralink.com');
 
@@ -220,7 +306,7 @@ INSERT INTO [ServiciosExtras] ([Nombre], [Precio], [Estado]) VALUES
 ('Piscina Climatizada',80000,1),
 ('Kayak 1h',40000,1),
 ('Fogata Nocturna',30000,1),
-('Decoracion Rom·ntica',150000,1);
+('Decoracion Rom√°ntica',150000,1);
 
 -- PROMOCIONES
 INSERT INTO [Promociones] ([Nombre], [Descuento], [FechaInicio], [FechaFin], [Estado]) VALUES
@@ -228,7 +314,7 @@ INSERT INTO [Promociones] ([Nombre], [Descuento], [FechaInicio], [FechaFin], [Es
 ('Puente Festivo',12.50,'2025-10-12','2025-10-15',1),
 ('Black Weekend',15.00,'2025-11-28','2025-12-01',1),
 ('Navidad',20.00,'2025-12-20','2025-12-27',1),
-('AÒo Nuevo',18.00,'2025-12-28','2026-01-05',1);
+('A√±o Nuevo',18.00,'2025-12-28','2026-01-05',1);
 
 /* ============ OPERACIoN ============ */
 
@@ -238,12 +324,12 @@ INSERT INTO [Inventarios] ([Finca], [Nombre], [Cantidad], [Estado]) VALUES
 (1,'Toallas',80,'Bueno'),
 (2,'Parrilla',5,'Bueno'),
 (3,'Kayaks',6,'Bueno'),
-(4,'Sillas JardÌn',20,'Regular');
+(4,'Sillas Jard√≠n',20,'Regular');
 
 -- MANTENIMIENTOS
 INSERT INTO [Mantenimientos] ([Finca], [Descripcion], [Costo], [Fecha], [Responsable]) VALUES
 (1,'Mantenimiento piscina',500000,'2025-09-01','Mateo Ramirez'),
-(2,'Pintura cabaÒas',800000,'2025-08-15','Andres Guerra'),
+(2,'Pintura caba√±as',800000,'2025-08-15','Andres Guerra'),
 (3,'Revision kayaks',200000,'2025-09-10','Mateo Ramirez'),
 (4,'Podado jardines',150000,'2025-09-05','Andres Guerra'),
 (5,'Revision paneles solares',300000,'2025-09-12','Proveedor Solar');
@@ -259,10 +345,10 @@ INSERT INTO [Reservas] ([FechaInicio], [FechaFin], [Estado], [Total], [Finca], [
 -- PAGOS (Reserva debe existir)
 INSERT INTO [Pagos] ([Reserva], [Monto], [FechadePago], [Metodo]) VALUES
 (1,360000,'2025-09-18 10:00:00','Transferencia'),
-(2,450000,'2025-10-05 09:30:00','Tarjeta CrÈdito'),
+(2,450000,'2025-10-05 09:30:00','Tarjeta Cr√©dito'),
 (2,450000,'2025-10-09 14:15:00','Efectivo'),
 (4,180000,'2025-09-24 16:45:00','Nequi'),
-(5,440000,'2025-04-10 12:00:00','Tarjeta DÈbito');
+(5,440000,'2025-04-10 12:00:00','Tarjeta D√©bito');
 
 -- RESERVASERVICIOS (Reserva y Servicio deben existir)
 INSERT INTO [ReservaServicios] ([Reserva], [Servicio], [Cantidad]) VALUES
@@ -284,17 +370,17 @@ INSERT INTO [ReservaPromociones] ([Reserva], [Promocion]) VALUES
 INSERT INTO [Tareas] ([Empleado], [Finca], [Descripcion], [FechaAsignacion], [Estado]) VALUES
 (1,1,'Check-in grupo familiar','2025-09-20','Pendiente'),
 (2,1,'Revisar filtros piscina','2025-09-19','En Progreso'),
-(3,3,'Cotizar plan fin de aÒo','2025-10-01','Pendiente'),
-(4,2,'Limpieza cabaÒas','2025-09-25','Pendiente'),
+(3,3,'Cotizar plan fin de a√±o','2025-10-01','Pendiente'),
+(4,2,'Limpieza caba√±as','2025-09-25','Pendiente'),
 (5,4,'Tour caficultor','2025-09-22','Asignada');
 
--- RESE—AS (Finca y Cliente deben existir)
-INSERT INTO [ReseÒas] ([Finca], [Cliente], [Calificacion], [Comentario], [Fecha]) VALUES
+-- RESE√ëAS (Finca y Cliente deben existir)
+INSERT INTO [Rese√±as] ([Finca], [Cliente], [Calificacion], [Comentario], [Fecha]) VALUES
 (1,1,5,'Excelente servicio y paisaje','2025-09-23'),
 (3,2,4,'Muy buena vista, algo de ruido','2025-10-14'),
 (2,5,5,'Perfecto para familias','2025-04-20'),
 (4,4,4,'Tranquilo y bonito','2025-09-27'),
-(3,3,3,'Esperaba m·s actividades','2026-01-03');
+(3,3,3,'Esperaba m√°s actividades','2026-01-03');
 
 -- AUDITORIAS (Usuario debe existir)
 INSERT INTO [Auditorias] ([Usuario], [Accion], [Fecha], [TablaAfectada], [IdRegistroAfectado]) VALUES

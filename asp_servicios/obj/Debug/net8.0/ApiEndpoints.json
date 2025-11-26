@@ -1,0 +1,1668 @@
+[
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Auditorias, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IAuditoriasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Borrar",
+    "RelativePath": "Auditorias/Borrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Auditorias, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IAuditoriasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Guardar",
+    "RelativePath": "Auditorias/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Auditorias, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IAuditoriasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Listar",
+    "RelativePath": "Auditorias/Listar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Auditorias, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IAuditoriasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Modificar",
+    "RelativePath": "Auditorias/Modificar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.AuditoriasController",
+    "Method": "PorAccion",
+    "RelativePath": "Auditorias/PorAccion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.AuditoriasController",
+    "Method": "PorFecha",
+    "RelativePath": "Auditorias/PorFecha",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.AuditoriasController",
+    "Method": "PorUsuario",
+    "RelativePath": "Auditorias/PorUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Clientes, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IClientesAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Borrar",
+    "RelativePath": "Clientes/Borrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Clientes, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IClientesAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Guardar",
+    "RelativePath": "Clientes/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Clientes, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IClientesAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Listar",
+    "RelativePath": "Clientes/Listar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Clientes, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IClientesAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Modificar",
+    "RelativePath": "Clientes/Modificar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.ClientesController",
+    "Method": "PorCorreo",
+    "RelativePath": "Clientes/PorCorreo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.ClientesController",
+    "Method": "PorDocumento",
+    "RelativePath": "Clientes/PorDocumento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Empleados, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IEmpleadosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Borrar",
+    "RelativePath": "Empleados/Borrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Empleados, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IEmpleadosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Guardar",
+    "RelativePath": "Empleados/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Empleados, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IEmpleadosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Listar",
+    "RelativePath": "Empleados/Listar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Empleados, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IEmpleadosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Modificar",
+    "RelativePath": "Empleados/Modificar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.EmpleadosController",
+    "Method": "PorCargo",
+    "RelativePath": "Empleados/PorCargo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.EmpleadosController",
+    "Method": "PorTelefono",
+    "RelativePath": "Empleados/PorTelefono",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Fincas, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IFincasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Borrar",
+    "RelativePath": "Fincas/Borrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Fincas, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IFincasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Guardar",
+    "RelativePath": "Fincas/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Fincas, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IFincasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Listar",
+    "RelativePath": "Fincas/Listar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Fincas, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IFincasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Modificar",
+    "RelativePath": "Fincas/Modificar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.FincasController",
+    "Method": "PorUbicacion",
+    "RelativePath": "Fincas/PorUbicacion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Inventarios, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IInventariosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Borrar",
+    "RelativePath": "Inventarios/Borrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Inventarios, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IInventariosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Guardar",
+    "RelativePath": "Inventarios/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Inventarios, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IInventariosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Listar",
+    "RelativePath": "Inventarios/Listar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Inventarios, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IInventariosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Modificar",
+    "RelativePath": "Inventarios/Modificar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.InventariosController",
+    "Method": "PorNombre",
+    "RelativePath": "Inventarios/PorNombre",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Mantenimientos, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IMantenimientosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Borrar",
+    "RelativePath": "Mantenimientos/Borrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Mantenimientos, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IMantenimientosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Guardar",
+    "RelativePath": "Mantenimientos/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Mantenimientos, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IMantenimientosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Listar",
+    "RelativePath": "Mantenimientos/Listar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Mantenimientos, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IMantenimientosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Modificar",
+    "RelativePath": "Mantenimientos/Modificar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.MantenimientosController",
+    "Method": "PorFecha",
+    "RelativePath": "Mantenimientos/PorFecha",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.MantenimientosController",
+    "Method": "PorResponsable",
+    "RelativePath": "Mantenimientos/PorResponsable",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Pagos, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IPagosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Borrar",
+    "RelativePath": "Pagos/Borrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Pagos, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IPagosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Guardar",
+    "RelativePath": "Pagos/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Pagos, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IPagosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Listar",
+    "RelativePath": "Pagos/Listar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Pagos, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IPagosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Modificar",
+    "RelativePath": "Pagos/Modificar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.PagosController",
+    "Method": "PorFechadePago",
+    "RelativePath": "Pagos/PorFechadePago",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Promociones, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IPromocionesAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Borrar",
+    "RelativePath": "Promociones/Borrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Promociones, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IPromocionesAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Guardar",
+    "RelativePath": "Promociones/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Promociones, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IPromocionesAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Listar",
+    "RelativePath": "Promociones/Listar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Promociones, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IPromocionesAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Modificar",
+    "RelativePath": "Promociones/Modificar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.PromocionesController",
+    "Method": "PorNombre",
+    "RelativePath": "Promociones/PorNombre",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Rese\u00F1as, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IRese\u00F1asAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Borrar",
+    "RelativePath": "Rese\u00F1as/Borrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Rese\u00F1as, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IRese\u00F1asAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Guardar",
+    "RelativePath": "Rese\u00F1as/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Rese\u00F1as, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IRese\u00F1asAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Listar",
+    "RelativePath": "Rese\u00F1as/Listar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Rese\u00F1as, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IRese\u00F1asAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Modificar",
+    "RelativePath": "Rese\u00F1as/Modificar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.Rese\u00F1asController",
+    "Method": "PorCalificacion",
+    "RelativePath": "Rese\u00F1as/PorCalificacion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.Rese\u00F1asController",
+    "Method": "PorFecha",
+    "RelativePath": "Rese\u00F1as/PorFecha",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.ReservaPromociones, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IReservaPromocionesAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Borrar",
+    "RelativePath": "ReservaPromociones/Borrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.ReservaPromociones, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IReservaPromocionesAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Guardar",
+    "RelativePath": "ReservaPromociones/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.ReservaPromociones, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IReservaPromocionesAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Listar",
+    "RelativePath": "ReservaPromociones/Listar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.ReservaPromociones, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IReservaPromocionesAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Modificar",
+    "RelativePath": "ReservaPromociones/Modificar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.ReservaPromocionesController",
+    "Method": "PorPromocion",
+    "RelativePath": "ReservaPromociones/PorPromocion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Reservas, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IReservasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Borrar",
+    "RelativePath": "Reservas/Borrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Reservas, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IReservasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Guardar",
+    "RelativePath": "Reservas/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Reservas, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IReservasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Listar",
+    "RelativePath": "Reservas/Listar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Reservas, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IReservasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Modificar",
+    "RelativePath": "Reservas/Modificar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.ReservasController",
+    "Method": "PorCliente",
+    "RelativePath": "Reservas/PorCliente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.ReservaServicios, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IReservaServiciosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Borrar",
+    "RelativePath": "ReservaServicios/Borrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.ReservaServicios, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IReservaServiciosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Guardar",
+    "RelativePath": "ReservaServicios/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.ReservaServicios, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IReservaServiciosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Listar",
+    "RelativePath": "ReservaServicios/Listar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.ReservaServicios, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IReservaServiciosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Modificar",
+    "RelativePath": "ReservaServicios/Modificar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.ReservaServiciosController",
+    "Method": "PorServicio",
+    "RelativePath": "ReservaServicios/PorServicio",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.ServiciosExtras, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IServiciosExtrasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Borrar",
+    "RelativePath": "ServiciosExtras/Borrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.ServiciosExtras, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IServiciosExtrasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Guardar",
+    "RelativePath": "ServiciosExtras/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.ServiciosExtras, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IServiciosExtrasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Listar",
+    "RelativePath": "ServiciosExtras/Listar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.ServiciosExtras, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IServiciosExtrasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Modificar",
+    "RelativePath": "ServiciosExtras/Modificar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.ServiciosExtrasController",
+    "Method": "PorNombre",
+    "RelativePath": "ServiciosExtras/PorNombre",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Tareas, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.ITareasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Borrar",
+    "RelativePath": "Tareas/Borrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Tareas, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.ITareasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Guardar",
+    "RelativePath": "Tareas/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Tareas, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.ITareasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Listar",
+    "RelativePath": "Tareas/Listar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Tareas, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.ITareasAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Modificar",
+    "RelativePath": "Tareas/Modificar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.TareasController",
+    "Method": "PorEmpleado",
+    "RelativePath": "Tareas/PorEmpleado",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.TokenController",
+    "Method": "Llave",
+    "RelativePath": "Token/Llave",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.TokenController",
+    "Method": "Validate",
+    "RelativePath": "Token/Validate",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "datos",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Usuarios, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IUsuariosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Borrar",
+    "RelativePath": "Usuarios/Borrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Usuarios, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IUsuariosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Guardar",
+    "RelativePath": "Usuarios/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Usuarios, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IUsuariosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Listar",
+    "RelativePath": "Usuarios/Listar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.GenericoController\u00602[[lib_dominio.Entidades.Usuarios, lib_dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[lib_repositorios.Interfaces.IUsuariosAplicacion, lib_repositorios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Modificar",
+    "RelativePath": "Usuarios/Modificar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "asp_servicios.Controllers.UsuariosController",
+    "Method": "PorNombre_Usuario",
+    "RelativePath": "Usuarios/PorNombre_Usuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

@@ -4,8 +4,8 @@ namespace lib_presentaciones
 {
     public class Comunicaciones
     {
-        private string? URL = string.Empty,
-            llave = null;
+        private string? URL = string.Empty;
+        private string? llave = null;
 
         public Comunicaciones(string url = "http://localhost:5175/")
         {
@@ -14,7 +14,7 @@ namespace lib_presentaciones
 
         public Dictionary<string, object> ConstruirUrl(Dictionary<string, object> data, string Metodo)
         {
-             data["Url"] = URL + Metodo;
+            data["Url"] = URL + Metodo;
             data["UrlLlave"] = URL + "Token/Llave";
             return data;
         }
@@ -24,9 +24,11 @@ namespace lib_presentaciones
             var respuesta = new Dictionary<string, object>();
             try
             {
+                // Obtener llave primero
                 respuesta = await Llave(datos);
                 if (respuesta == null || respuesta.ContainsKey("Error"))
-                    return respuesta!;
+                    return respuesta;
+
                 respuesta.Clear();
 
                 if (string.IsNullOrEmpty(llave))
@@ -35,15 +37,19 @@ namespace lib_presentaciones
                     return respuesta;
                 }
 
+                // Preparar datos para envío
                 var url = datos["Url"].ToString();
                 datos.Remove("Url");
                 datos.Remove("UrlLlave");
-                datos["Llave"] = llave!;
+                datos["Llave"] = llave;
+
                 var stringData = JsonConversor.ConvertirAString(datos);
 
                 var httpClient = new HttpClient();
-                httpClient.Timeout = new TimeSpan(0, 4, 0);
+                httpClient.Timeout = TimeSpan.FromMinutes(4);
+
                 var message = await httpClient.PostAsync(url, new StringContent(stringData));
+
                 if (!message.IsSuccessStatusCode)
                 {
                     respuesta.Add("Error", "lbErrorComunicacion");
@@ -51,14 +57,14 @@ namespace lib_presentaciones
                 }
 
                 var resp = await message.Content.ReadAsStringAsync();
-                httpClient.Dispose(); httpClient = null;
+
                 if (string.IsNullOrEmpty(resp))
                 {
                     respuesta.Add("Error", "lbErrorComunicacion");
                     return respuesta;
                 }
 
-                resp = Replace(resp);
+                // Convertir JSON limpio
                 respuesta = JsonConversor.ConvertirAObjeto(resp);
                 return respuesta;
             }
@@ -72,37 +78,43 @@ namespace lib_presentaciones
         private async Task<Dictionary<string, object>> Llave(Dictionary<string, object> datos)
         {
             var respuesta = new Dictionary<string, object>();
+
             try
             {
                 var url = datos["UrlLlave"].ToString();
-                var temp = new Dictionary<string, object>();
-                temp["Entidad"] = new Dictionary<string, object>()
+                var temp = new Dictionary<string, object>()
                 {
-                    { "NombreUsuario", "admin" },
-                    { "Clave", "admin123" }
+                    ["Entidad"] = new Dictionary<string, object>()
+                    {
+                        { "NombreUsuario", "admin" },
+                        { "Clave", "admin123" }
+                    }
                 };
+
                 var stringData = JsonConversor.ConvertirAString(temp);
 
                 var httpClient = new HttpClient();
-                httpClient.Timeout = new TimeSpan(0, 1, 0);
+                httpClient.Timeout = TimeSpan.FromMinutes(1);
+
                 var mensaje = await httpClient.PostAsync(url, new StringContent(stringData));
+
                 if (!mensaje.IsSuccessStatusCode)
                 {
-                    respuesta.Add("Error", "lbErrorComunicacion");
+                    respuesta["Error"] = "lbErrorComunicacion";
                     return respuesta;
                 }
 
                 var resp = await mensaje.Content.ReadAsStringAsync();
-                httpClient.Dispose(); httpClient = null;
+
                 if (string.IsNullOrEmpty(resp))
                 {
-                    respuesta.Add("Error", "lbErrorComunicacion");
+                    respuesta["Error"] = "lbErrorComunicacion";
                     return respuesta;
                 }
 
-                resp = Replace(resp);
                 respuesta = JsonConversor.ConvertirAObjeto(resp);
-                llave = respuesta["Llave"].ToString();
+
+                llave = respuesta["Llave"]?.ToString();
                 return respuesta;
             }
             catch (Exception ex)
@@ -110,28 +122,6 @@ namespace lib_presentaciones
                 respuesta["Error"] = ex.ToString();
                 return respuesta;
             }
-        }
-
-        private string Replace(string resp)
-        {
-            return resp.Replace("\\\\r\\\\n", "")
-            .Replace("\\r\\n", "")
-            .Replace("\\", "")
-            .Replace("\\\"", "\"")
-            .Replace("\"", "'")
-            .Replace("'[", "[")
-            .Replace("]'", "]")
-            .Replace("'{'", "{'")
-            .Replace("\\\\", "\\")
-            .Replace("'}'", "'}")
-            .Replace("}'", "}")
-            .Replace("\\n", "")
-            .Replace("\\r", "")
-            .Replace(" ", "")
-            .Replace("'{", "{")
-            .Replace("\"", "")
-            .Replace(" ", "")
-            .Replace("null", "''");
         }
     }
 }

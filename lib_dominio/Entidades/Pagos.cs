@@ -1,4 +1,6 @@
 ﻿
+using System.ComponentModel.DataAnnotations;
+
 namespace lib_dominio.Entidades
 {
     public class Pagos : IEntidad
@@ -8,6 +10,6 @@ namespace lib_dominio.Entidades
         public Reservas? _Reserva { get; set; }
         public decimal Monto { get; set; }
         public DateTime FechadePago { get; set; } = DateTime.Now;
-        public required string Metodo { get; set; }
+        [Required] public string Metodo { get; set; } = String.Empty;
     }
 }
