@@ -1,18 +1,22 @@
 ﻿@page
 @model asp_presentacion.Pages.Ventanas.ClientesModel
 @{
-    ViewData["Titulo"] = "";
+    ViewData["Titulo"] = "Gestión de Clientes";
 }
-<center>
-    <div>
-        <form method="POST" enctype="multipart/form-data">
-            @Html.AntiForgeryToken()
 
-            <div align="left">
-                <h3>Clientes</h3>
-            </div>
+<div class="containers_vn">
 
-            <div align="left" class="bt_panel_buttons">
+    <form method="POST" enctype="multipart/form-data">
+
+        @Html.AntiForgeryToken()
+
+        <!-- =======================
+             HEADER + BOTONES SUPERIORES
+           ======================= -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="m-0">Clientes</h3>
+
+            <div class="btn-group">
                 <input type="submit"
                        value="Refrescar"
                        asp-page-handler="BtRefrescar"
@@ -22,13 +26,13 @@
                 <input type="submit"
                        value="Nuevo"
                        asp-page-handler="BtNuevo"
-                       class="btn btn-secondary"
+                       class="btn btn-primary"
                        disabled="@(Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
 
                 <input type="submit"
                        value="Guardar"
                        asp-page-handler="BtGuardar"
-                       class="btn btn-secondary"
+                       class="btn btn-primary"
                        disabled="@(Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
 
                 <input type="submit"
@@ -37,116 +41,129 @@
                        class="btn btn-secondary"
                        disabled="@(Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
             </div>
+        </div>
 
-            @if (Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
-                        Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <input type="hidden" asp-for="@Model.Actual!.Id" />
-            }
+        <!-- =======================
+             CAMPOS OCULTOS
+           ======================= -->
+        @if (Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas)
+        {
+            <input type="hidden" asp-for="@Model.Actual!.Id" />
+        }
 
-            @* Campos ocultos en modo borrado *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <input type="hidden" asp-for="@Model.Actual!.Nombre" />
-                <input type="hidden" asp-for="@Model.Actual!.Apellido" />
-                <input type="hidden" asp-for="@Model.Actual!.Correo" />
-                <input type="hidden" asp-for="@Model.Actual!.Telefono" />
-                <input type="hidden" asp-for="@Model.Actual!.Documento" />
-            }
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <input type="hidden" asp-for="@Model.Actual!.Nombre" />
+            <input type="hidden" asp-for="@Model.Actual!.Apellido" />
+            <input type="hidden" asp-for="@Model.Actual!.Correo" />
+            <input type="hidden" asp-for="@Model.Actual!.Telefono" />
+            <input type="hidden" asp-for="@Model.Actual!.Documento" />
+        }
 
-            @* FORMULARIO EDITAR / NUEVO *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Editar)
-            {
-                <div class="containers_vn panel panel-default">
-                    <h3>Cliente</h3>
+        <!-- =======================
+             FORMULARIO EDITAR / NUEVO
+           ======================= -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Editar)
+        {
+            <div class="containers_em mt-3">
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Nombre</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Nombre" />
-                        </div>
+                <h4 class="mb-3">Información del Cliente</h4>
+
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <label>Nombre</label>
+                        <input class="form-control" asp-for="@Model.Actual!.Nombre" />
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Apellido</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Apellido" />
-                        </div>
+                    <div class="col-md-6">
+                        <label>Apellido</label>
+                        <input class="form-control" asp-for="@Model.Actual!.Apellido" />
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Correo</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Correo" />
-                        </div>
+                    <div class="col-md-6">
+                        <label>Correo</label>
+                        <input class="form-control" asp-for="@Model.Actual!.Correo" />
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Teléfono</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Telefono" />
-                        </div>
+                    <div class="col-md-6">
+                        <label>Teléfono</label>
+                        <input class="form-control" asp-for="@Model.Actual!.Telefono" />
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Documento</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Documento" />
-                        </div>
+                    <div class="col-md-6">
+                        <label>Documento</label>
+                        <input class="form-control" asp-for="@Model.Actual!.Documento" />
                     </div>
+
                 </div>
-            }
+            </div>
+        }
 
-            @* MENSAJES *@
-            @if (ViewData.ContainsKey("Mensaje"))
-            {
-                <input type="hidden" asp-for="@Model.Accion" />
-                @await Html.PartialAsync("../Emergentes/Mensajes.cshtml")
-            }
+        <!-- =======================
+             MENSAJES POPUP
+           ======================= -->
+        @if (ViewData.ContainsKey("Mensaje"))
+        {
+            <input type="hidden" asp-for="@Model.Accion" />
+            @await Html.PartialAsync("../Emergentes/Mensajes.cshtml")
+        }
 
-            @* POPUP BORRAR *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <div class='popup'>
-                    <div class='pp_del_inner'>
-                        <h2 align="left">Mensaje</h2>
-                        <h4 align="left">¿Desea borrar este cliente?</h4>
-                        <h6 align="left">@Model.Actual!.Nombre @Model.Actual!.Apellido</h6>
+        <!-- =======================
+             POPUP BORRAR CLIENTE
+           ======================= -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <div class='popup'>
+                <div class='pp_del_inner'>
 
-                        <br /><br />
+                    <h3 class="text-start">Eliminar Cliente</h3>
 
-                        <input type="submit" value="Borrar"
+                    <p class="mt-3 text-start">¿Deseas eliminar este cliente?</p>
+
+                    <h5 class="text-start">@Model.Actual!.Nombre @Model.Actual!.Apellido</h5>
+
+                    <div class="mt-4 text-center">
+                        <input type="submit"
+                               value="Borrar"
                                asp-page-handler="BtBorrar"
-                               class="btn btn-secondary" />
+                               class="btn btn-danger me-2" />
 
-                        <input type="submit" value="Cerrar"
+                        <input type="submit"
+                               value="Cancelar"
                                asp-page-handler="BtCancelar"
                                class="btn btn-secondary" />
                     </div>
+
                 </div>
-            }
+            </div>
+        }
 
-            @* LISTADO *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
-                        Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <input class="cts_forms form-control"
-                       asp-for="@Model.Filtro!.Correo"
-                       placeholder="Buscar por Correo" />
+        <!-- =======================
+             LISTADO + FILTROS
+           ======================= -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
+                Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <!-- Filtros -->
+            <div class="row g-2">
+                <div class="col-md-6">
+                    <input class="form-control"
+                           asp-for="@Model.Filtro!.Correo"
+                           placeholder="Buscar por correo..." />
+                </div>
 
-                <input class="cts_forms form-control"
-                       asp-for="@Model.Filtro!.Documento"
-                       placeholder="Buscar por Documento" />
+                <div class="col-md-6">
+                    <input class="form-control"
+                           asp-for="@Model.Filtro!.Documento"
+                           placeholder="Buscar por documento..." />
+                </div>
+            </div>
 
-                <br />
-
-                <div class="containers_vn panel panel-default">
-                    <table class="tb_data table table-striped table-bordered table-hover">
+            <!-- Tabla -->
+            <div class="containers_em mt-3">
+                <table class="tb_data">
+                    <thead>
                         <tr>
                             <th>Nombre</th>
                             <th>Apellido</th>
@@ -155,37 +172,42 @@
                             <th>Documento</th>
                             <th class="cl_actions">Acciones</th>
                         </tr>
+                    </thead>
 
+                    <tbody>
                         @if (Model.Lista != null)
                         {
                             foreach (var elemento in Model.Lista)
                             {
                                 <tr>
-                                    <td>@elemento.Nombre</td>
-                                    <td>@elemento.Apellido</td>
-                                    <td>@elemento.Correo</td>
-                                    <td>@elemento.Telefono</td>
-                                    <td>@elemento.Documento</td>
+                                    <td>@(elemento?.Nombre ?? "")</td>
+                                    <td>@(elemento?.Apellido ?? "")</td>
+                                    <td>@(elemento?.Correo ?? "")</td>
+                                    <td>@(elemento?.Telefono ?? "")</td>
+                                    <td>@(elemento?.Documento ?? "")</td>
 
                                     <td>
                                         <input type="submit"
                                                value="Modificar"
                                                asp-page-handler="BtModificar"
-                                               class="btn btn-secondary"
-                                               asp-route-data="@elemento.Id" />
+                                               asp-route-data="@elemento?.Id"
+                                               class="btn btn-light btn-sm" />
 
                                         <input type="submit"
                                                value="Borrar"
                                                asp-page-handler="BtBorrarVal"
-                                               class="btn btn-secondary"
-                                               asp-route-data="@elemento.Id" />
+                                               asp-route-data="@elemento?.Id"
+                                               class="btn btn-danger btn-sm ms-1" />
                                     </td>
                                 </tr>
                             }
                         }
-                    </table>
-                </div>
-            }
-        </form>
-    </div>
-</center>
+                    </tbody>
+
+                </table>
+            </div>
+        }
+
+    </form>
+
+</div>

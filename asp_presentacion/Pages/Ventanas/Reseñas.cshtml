@@ -1,152 +1,171 @@
 ﻿@page
 @model asp_presentacion.Pages.Ventanas.ReseñasModel
 @{
-    ViewData["Titulo"] = "";
+    ViewData["Titulo"] = "Reseñas";
 }
-<center>
-    <div>
-        <form method="POST" enctype="multipart/form-data">
-            @Html.AntiForgeryToken()
 
-            <div align="left">
-                <h3>Reseñas</h3>
-            </div>
+<div class="containers_vn">
 
-            <div align="left" class="bt_panel_buttons">
+    <form method="POST" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+
+        <!-- ============================================================
+             TÍTULO + BOTONERA
+             ============================================================ -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="m-0">Reseñas</h3>
+
+            <div class="bt_panel_buttons m-0">
                 <input type="submit"
                        value="Refrescar"
                        asp-page-handler="BtRefrescar"
-                       class="btn btn-secondary"
+                       class="btn btn-primary me-1"
                        disabled="@(Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
 
                 <input type="submit"
                        value="Nuevo"
                        asp-page-handler="BtNuevo"
-                       class="btn btn-secondary"
+                       class="btn btn-secondary me-1"
                        disabled="@(Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
 
                 <input type="submit"
                        value="Guardar"
                        asp-page-handler="BtGuardar"
-                       class="btn btn-secondary"
+                       class="btn btn-success me-1"
                        disabled="@(Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
 
                 <input type="submit"
                        value="Cancelar"
                        asp-page-handler="BtCancelar"
-                       class="btn btn-secondary"
+                       class="btn btn-danger"
                        disabled="@(Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
             </div>
+        </div>
 
-            @if (Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
-                        Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <input type="hidden" asp-for="@Model.Actual!.Id" />
-            }
+        <!-- ID oculto -->
+        @if (Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
+                Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <input type="hidden" asp-for="@Model.Actual!.Id" />
+        }
 
-            @* OCULTOS EN BORRAR *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <input type="hidden" asp-for="@Model.Actual!.Finca" />
-                <input type="hidden" asp-for="@Model.Actual!.Cliente" />
-                <input type="hidden" asp-for="@Model.Actual!.Calificacion" />
-                <input type="hidden" asp-for="@Model.Actual!.Comentario" />
-                <input type="hidden" asp-for="@Model.Actual!.Fecha" />
-            }
+        <!-- OCULTOS EN BORRAR -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <input type="hidden" asp-for="@Model.Actual!.Finca" />
+            <input type="hidden" asp-for="@Model.Actual!.Cliente" />
+            <input type="hidden" asp-for="@Model.Actual!.Calificacion" />
+            <input type="hidden" asp-for="@Model.Actual!.Comentario" />
+            <input type="hidden" asp-for="@Model.Actual!.Fecha" />
+        }
 
-            @* FORMULARIO EDITAR / NUEVO *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Editar)
-            {
-                <div class="containers_vn panel panel-default">
-                    <h3>Reseña</h3>
+        <!-- ============================================================
+             FORMULARIO CREAR/EDITAR
+             ============================================================ -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Editar)
+        {
+            <div class="containers_em mb-3">
+                <h4 class="mb-3">Reseña</h4>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Finca (ID)</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Finca" />
-                        </div>
+                <div class="row g-3">
+
+                    <div class="col-md-4">
+                        <label>Finca (ID)</label>
+                        <input class="form-control"
+                               asp-for="@Model.Actual!.Finca" />
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Cliente (ID)</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Cliente" />
-                        </div>
+                    <div class="col-md-4">
+                        <label>Cliente (ID)</label>
+                        <input class="form-control"
+                               asp-for="@Model.Actual!.Cliente" />
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Calificación (1 a 5)</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Calificacion" />
-                        </div>
+                    <div class="col-md-4">
+                        <label>Calificación (1 a 5)</label>
+                        <input class="form-control"
+                               asp-for="@Model.Actual!.Calificacion" />
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Comentario</label>
-                        <div class="col-lg-6">
-                            <textarea class="cts_forms form-control"
-                                      asp-for="@Model.Actual!.Comentario"></textarea>
-                        </div>
+                    <div class="col-md-12">
+                        <label>Comentario</label>
+                        <textarea class="form-control"
+                                  asp-for="@Model.Actual!.Comentario"></textarea>
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Fecha</label>
-                        <div class="col-lg-6">
-                            <input type="date"
-                                   class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Fecha" />
-                        </div>
+                    <div class="col-md-4">
+                        <label>Fecha</label>
+                        <input type="date"
+                               class="form-control"
+                               asp-for="@Model.Actual!.Fecha" />
+                    </div>
+
+                </div>
+            </div>
+        }
+
+        <!-- ============================================================
+             MENSAJES EMERGENTES
+             ============================================================ -->
+        @if (ViewData.ContainsKey("Mensaje"))
+        {
+            <input type="hidden" asp-for="@Model.Accion" />
+            @await Html.PartialAsync("../Emergentes/Mensajes.cshtml")
+        }
+
+        <!-- ============================================================
+             POPUP BORRAR
+             ============================================================ -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <div class='popup'>
+                <div class='pp_del_inner'>
+                    <h2 align="left">Confirmación</h2>
+                    <h4 align="left">¿Desea borrar la reseña?</h4>
+                    <h6 align="left">Calificación: @Model.Actual!.Calificacion</h6>
+
+                    <br />
+
+                    <input type="submit" value="Borrar"
+                           asp-page-handler="BtBorrar"
+                           class="btn btn-danger me-2" />
+
+                    <input type="submit" value="Cerrar"
+                           asp-page-handler="BtCancelar"
+                           class="btn btn-secondary" />
+                </div>
+            </div>
+        }
+
+        <!-- ============================================================
+             LISTADO
+             ============================================================ -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
+                Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <div class="containers_em mb-3">
+                <h5 class="mb-3">Filtros</h5>
+
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label>Calificación</label>
+                        <input class="form-control"
+                               asp-for="@Model.Filtro!.Calificacion"
+                               placeholder="1 a 5" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <label>Fecha</label>
+                        <input type="date"
+                               class="form-control"
+                               asp-for="@Model.Filtro!.Fecha" />
                     </div>
                 </div>
-            }
+            </div>
 
-            @if (ViewData.ContainsKey("Mensaje"))
-            {
-                <input type="hidden" asp-for="@Model.Accion" />
-                @await Html.PartialAsync("../Emergentes/Mensajes.cshtml")
-            }
-
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <div class='popup'>
-                    <div class='pp_del_inner'>
-                        <h2 align="left">Mensaje</h2>
-                        <h4 align="left">¿Desea borrar la reseña?</h4>
-                        <h6 align="left">Calificación: @Model.Actual!.Calificacion</h6>
-
-                        <br /><br />
-
-                        <input type="submit" value="Borrar"
-                               asp-page-handler="BtBorrar"
-                               class="btn btn-secondary" />
-
-                        <input type="submit" value="Cerrar"
-                               asp-page-handler="BtCancelar"
-                               class="btn btn-secondary" />
-                    </div>
-                </div>
-            }
-
-            @* LISTADO *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
-                        Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <label>Calificación:</label>
-                <input class="cts_forms form-control"
-                       asp-for="@Model.Filtro!.Calificacion"
-                       placeholder="1 a 5" />
-
-                <label>Fecha:</label>
-                <input class="cts_forms form-control" type="date"
-                       asp-for="@Model.Filtro!.Fecha" />
-
-                <br />
-
-                <div class="containers_vn panel panel-default">
-                    <table class="tb_data table table-striped table-bordered table-hover">
+            <div class="containers_em">
+                <table class="tb_data">
+                    <thead>
                         <tr>
                             <th>Finca</th>
                             <th>Cliente</th>
@@ -155,7 +174,9 @@
                             <th>Fecha</th>
                             <th class="cl_actions">Acciones</th>
                         </tr>
+                    </thead>
 
+                    <tbody>
                         @if (Model.Lista != null)
                         {
                             foreach (var elemento in Model.Lista)
@@ -175,21 +196,21 @@
                                         <input type="submit"
                                                value="Modificar"
                                                asp-page-handler="BtModificar"
-                                               class="btn btn-secondary"
+                                               class="btn btn-secondary btn-sm me-1"
                                                asp-route-data="@elemento.Id" />
 
                                         <input type="submit"
                                                value="Borrar"
                                                asp-page-handler="BtBorrarVal"
-                                               class="btn btn-secondary"
+                                               class="btn btn-danger btn-sm"
                                                asp-route-data="@elemento.Id" />
                                     </td>
                                 </tr>
                             }
                         }
-                    </table>
-                </div>
-            }
-        </form>
-    </div>
-</center>
+                    </tbody>
+                </table>
+            </div>
+        }
+    </form>
+</div>

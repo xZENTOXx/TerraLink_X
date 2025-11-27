@@ -1,18 +1,24 @@
 ﻿@page
 @model asp_presentacion.Pages.Ventanas.PromocionesModel
 @{
-    ViewData["Titulo"] = "";
+    ViewData["Titulo"] = "Promociones";
 }
-<center>
-    <div>
-        <form method="POST" enctype="multipart/form-data">
-            @Html.AntiForgeryToken()
 
-            <div align="left">
-                <h3>Promociones</h3>
-            </div>
+<div class="containers_vn">
 
-            <div align="left" class="bt_panel_buttons">
+    <form method="POST" enctype="multipart/form-data">
+
+        @Html.AntiForgeryToken()
+
+        <!-- =====================================================
+             TÍTULO + ACCIONES
+             ===================================================== -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+
+            <h3 class="m-0">Promociones</h3>
+
+            <div class="btn-group">
+
                 <input type="submit"
                        value="Refrescar"
                        asp-page-handler="BtRefrescar"
@@ -22,13 +28,13 @@
                 <input type="submit"
                        value="Nuevo"
                        asp-page-handler="BtNuevo"
-                       class="btn btn-secondary"
+                       class="btn btn-primary"
                        disabled="@(Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
 
                 <input type="submit"
                        value="Guardar"
                        asp-page-handler="BtGuardar"
-                       class="btn btn-secondary"
+                       class="btn btn-primary"
                        disabled="@(Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
 
                 <input type="submit"
@@ -36,116 +42,137 @@
                        asp-page-handler="BtCancelar"
                        class="btn btn-secondary"
                        disabled="@(Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
+
+            </div>
+        </div>
+
+        <!-- =====================================================
+             CAMPOS OCULTOS
+             ===================================================== -->
+        @if (Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas)
+        {
+            <input type="hidden" asp-for="@Model.Actual!.Id" />
+        }
+
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <input type="hidden" asp-for="@Model.Actual!.Nombre" />
+            <input type="hidden" asp-for="@Model.Actual!.Descuento" />
+            <input type="hidden" asp-for="@Model.Actual!.FechaInicio" />
+            <input type="hidden" asp-for="@Model.Actual!.FechaFin" />
+            <input type="hidden" asp-for="@Model.Actual!.Estado" />
+        }
+
+        <!-- =====================================================
+             FORM EDITAR / NUEVO
+             ===================================================== -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Editar)
+        {
+            <div class="containers_em mt-3">
+
+                <h4 class="mb-3">Información de la Promoción</h4>
+
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <label>Nombre</label>
+                        <input class="form-control"
+                               asp-for="@Model.Actual!.Nombre" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label>Descuento (%)</label>
+                        <input class="form-control"
+                               asp-for="@Model.Actual!.Descuento" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label>Fecha Inicio</label>
+                        <input type="date"
+                               class="form-control"
+                               asp-for="@Model.Actual!.FechaInicio" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label>Fecha Fin</label>
+                        <input type="date"
+                               class="form-control"
+                               asp-for="@Model.Actual!.FechaFin" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label>Estado</label>
+                        <select class="form-control"
+                                asp-for="@Model.Actual!.Estado">
+                            <option value="true">Activa</option>
+                            <option value="false">Inactiva</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+        }
+
+        <!-- =====================================================
+             MENSAJES
+             ===================================================== -->
+        @if (ViewData.ContainsKey("Mensaje"))
+        {
+            <input type="hidden" asp-for="@Model.Accion" />
+            @await Html.PartialAsync("../Emergentes/Mensajes.cshtml")
+        }
+
+        <!-- =====================================================
+             POPUP BORRAR
+             ===================================================== -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <div class="popup">
+                <div class="pp_del_inner">
+
+                    <h3 class="text-start">Eliminar Promoción</h3>
+
+                    <p class="mt-3 text-start">¿Desea borrar esta promoción?</p>
+
+                    <h5 class="text-start">@Model.Actual!.Nombre</h5>
+
+                    <div class="mt-4 text-center">
+                        <input type="submit"
+                               value="Borrar"
+                               class="btn btn-danger me-2"
+                               asp-page-handler="BtBorrar" />
+
+                        <input type="submit"
+                               value="Cancelar"
+                               class="btn btn-secondary"
+                               asp-page-handler="BtCancelar" />
+                    </div>
+
+                </div>
+            </div>
+        }
+
+        <!-- =====================================================
+             LISTADO + FILTRO
+             ===================================================== -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
+                Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <div class="row g-2 mb-3">
+                <div class="col-md-6">
+                    <label>Buscar por Nombre:</label>
+                    <input class="form-control"
+                           asp-for="@Model.Filtro!.Nombre"
+                           placeholder="Nombre de la promoción..." />
+                </div>
             </div>
 
-            @if (Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
-                        Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <input type="hidden" asp-for="@Model.Actual!.Id" />
-            }
+            <div class="containers_em">
 
-            @* CAMPOS OCULTOS EN BORRAR *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <input type="hidden" asp-for="@Model.Actual!.Nombre" />
-                <input type="hidden" asp-for="@Model.Actual!.Descuento" />
-                <input type="hidden" asp-for="@Model.Actual!.FechaInicio" />
-                <input type="hidden" asp-for="@Model.Actual!.FechaFin" />
-                <input type="hidden" asp-for="@Model.Actual!.Estado" />
-            }
+                <table class="tb_data">
 
-            @* FORM EDITAR / NUEVO *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Editar)
-            {
-                <div class="containers_vn panel panel-default">
-                    <h3>Promoción</h3>
-
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Nombre</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Nombre" />
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Descuento (%)</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Descuento" />
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Fecha Inicio</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control" type="date"
-                                   asp-for="@Model.Actual!.FechaInicio" />
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Fecha Fin</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control" type="date"
-                                   asp-for="@Model.Actual!.FechaFin" />
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Estado</label>
-                        <div class="col-lg-6">
-                            <select asp-for="@Model.Actual!.Estado" class="cts_forms form-control">
-                                <option value="true">Activa</option>
-                                <option value="false">Inactiva</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            }
-
-            @* MENSAJES *@
-            @if (ViewData.ContainsKey("Mensaje"))
-            {
-                <input type="hidden" asp-for="@Model.Accion" />
-                @await Html.PartialAsync("../Emergentes/Mensajes.cshtml")
-            }
-
-            @* POPUP BORRAR *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <div class='popup'>
-                    <div class='pp_del_inner'>
-                        <h2 align="left">Mensaje</h2>
-                        <h4 align="left">¿Desea borrar esta promoción?</h4>
-                        <h6 align="left">@Model.Actual!.Nombre</h6>
-
-                        <br /><br />
-
-                        <input type="submit" value="Borrar"
-                               asp-page-handler="BtBorrar"
-                               class="btn btn-secondary" />
-
-                        <input type="submit" value="Cerrar"
-                               asp-page-handler="BtCancelar"
-                               class="btn btn-secondary" />
-                    </div>
-                </div>
-            }
-
-            @* LISTADO *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
-                        Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <label>Buscar por Nombre:</label>
-                <input class="cts_forms form-control"
-                       asp-for="@Model.Filtro!.Nombre"
-                       placeholder="Nombre de la promoción" />
-
-                <br />
-
-                <div class="containers_vn panel panel-default">
-                    <table class="tb_data table table-striped table-bordered table-hover">
+                    <thead>
                         <tr>
                             <th>Nombre</th>
                             <th>Descuento</th>
@@ -154,37 +181,48 @@
                             <th>Estado</th>
                             <th class="cl_actions">Acciones</th>
                         </tr>
+                    </thead>
 
-                        @if (Model.Lista != null)
+                    <tbody>
+                        @* 
+                       Se recorre Model.Lista de forma segura:
+                       - Si Model.Lista NO es null, se usa esa lista.
+                       - Si Model.Lista es null, se usa Enumerable.Empty<Entidad>(), 
+                         que devuelve una lista vacía del tipo indicado.
+                       Así evitamos errores por null (NullReferenceException) 
+                       y el foreach siempre tiene algo que iterar, aunque sea una colección vacía.
+                    *@
+                        @foreach (var elemento in Model.Lista ?? Enumerable.Empty<lib_dominio.Entidades.Promociones>())
                         {
-                            foreach (var elemento in Model.Lista)
-                            {
-                                <tr>
-                                    <td>@elemento.Nombre</td>
-                                    <td>@elemento.Descuento %</td>
-                                    <td>@elemento.FechaInicio.ToShortDateString()</td>
-                                    <td>@elemento.FechaFin.ToShortDateString()</td>
-                                    <td>@(elemento.Estado ? "Activa" : "Inactiva")</td>
+                            <tr>
+                                <td>@elemento.Nombre</td>
+                                <td>@($"{elemento.Descuento} %")</td>
+                                <td>@elemento.FechaInicio.ToShortDateString()</td>
+                                <td>@elemento.FechaFin.ToShortDateString()</td>
+                                <td>@(elemento.Estado ? "Activa" : "Inactiva")</td>
 
-                                    <td>
-                                        <input type="submit"
-                                               value="Modificar"
-                                               asp-page-handler="BtModificar"
-                                               class="btn btn-secondary"
-                                               asp-route-data="@elemento.Id" />
+                                <td>
+                                    <input type="submit"
+                                           value="Modificar"
+                                           class="btn btn-light btn-sm"
+                                           asp-page-handler="BtModificar"
+                                           asp-route-data="@elemento.Id" />
 
-                                        <input type="submit"
-                                               value="Borrar"
-                                               asp-page-handler="BtBorrarVal"
-                                               class="btn btn-secondary"
-                                               asp-route-data="@elemento.Id" />
-                                    </td>
-                                </tr>
-                            }
+                                    <input type="submit"
+                                           value="Borrar"
+                                           class="btn btn-danger btn-sm ms-1"
+                                           asp-page-handler="BtBorrarVal"
+                                           asp-route-data="@elemento.Id" />
+                                </td>
+                            </tr>
                         }
-                    </table>
-                </div>
-            }
-        </form>
-    </div>
-</center>
+                    </tbody>
+
+                </table>
+
+            </div>
+        }
+
+    </form>
+
+</div>

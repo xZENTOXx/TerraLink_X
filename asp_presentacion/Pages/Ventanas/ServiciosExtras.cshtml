@@ -1,18 +1,24 @@
 ﻿@page
 @model asp_presentacion.Pages.Ventanas.ServiciosExtrasModel
 @{
-    ViewData["Titulo"] = "";
+    ViewData["Titulo"] = "Servicios Extras";
 }
-<center>
-    <div>
-        <form method="POST" enctype="multipart/form-data">
-            @Html.AntiForgeryToken()
 
-            <div align="left">
-                <h3>Servicios Extras</h3>
-            </div>
+<div class="containers_vn">
 
-            <div align="left" class="bt_panel_buttons">
+    <form method="POST" enctype="multipart/form-data">
+
+        @Html.AntiForgeryToken()
+
+        <!-- =====================================================
+             TÍTULO + BOTONES PRINCIPALES
+             ===================================================== -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+
+            <h3 class="m-0">Servicios Extras</h3>
+
+            <div class="btn-group">
+
                 <input type="submit"
                        value="Refrescar"
                        asp-page-handler="BtRefrescar"
@@ -22,13 +28,13 @@
                 <input type="submit"
                        value="Nuevo"
                        asp-page-handler="BtNuevo"
-                       class="btn btn-secondary"
+                       class="btn btn-primary"
                        disabled="@(Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
 
                 <input type="submit"
                        value="Guardar"
                        asp-page-handler="BtGuardar"
-                       class="btn btn-secondary"
+                       class="btn btn-primary"
                        disabled="@(Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
 
                 <input type="submit"
@@ -36,135 +42,169 @@
                        asp-page-handler="BtCancelar"
                        class="btn btn-secondary"
                        disabled="@(Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
+
             </div>
+        </div>
 
-            @* ID oculto *@
-            @if (Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
-                        Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <input type="hidden" asp-for="@Model.Actual!.Id" />
-            }
+        <!-- =====================================================
+             CAMPOS OCULTOS NECESARIOS
+             ===================================================== -->
+        @if (Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas)
+        {
+            <input type="hidden" asp-for="@Model.Actual!.Id" />
+        }
 
-            @* Campos ocultos cuando se borra *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <input type="hidden" asp-for="@Model.Actual!.Nombre" />
-                <input type="hidden" asp-for="@Model.Actual!.Precio" />
-                <input type="hidden" asp-for="@Model.Actual!.Estado" />
-            }
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <input type="hidden" asp-for="@Model.Actual!.Nombre" />
+            <input type="hidden" asp-for="@Model.Actual!.Precio" />
+            <input type="hidden" asp-for="@Model.Actual!.Estado" />
+        }
 
-            @* FORMULARIO NUEVO / EDITAR *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Editar)
-            {
-                <div class="containers_vn panel panel-default">
-                    <h3>Servicio Extra</h3>
+        <!-- =====================================================
+             FORMULARIO EDITAR / NUEVO
+             ===================================================== -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Editar)
+        {
+            <div class="containers_em mt-3">
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Nombre</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Nombre" />
-                        </div>
+                <h4 class="mb-3">Servicio Extra</h4>
+
+                <div class="row g-3">
+
+                    <!-- Nombre -->
+                    <div class="col-md-6">
+                        <label>Nombre</label>
+                        <input class="form-control"
+                               asp-for="@Model.Actual!.Nombre" />
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Precio</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Precio" />
-                        </div>
+                    <!-- Precio -->
+                    <div class="col-md-6">
+                        <label>Precio</label>
+                        <input type="number"
+                               step="0.01"
+                               min="0"
+                               class="form-control"
+                               asp-for="@Model.Actual!.Precio" />
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Estado</label>
-                        <div class="col-lg-6">
-                            <select class="cts_forms form-control"
-                                    asp-for="@Model.Actual!.Estado">
-                                <option value="true">Activo</option>
-                                <option value="false">Inactivo</option>
-                            </select>
-                        </div>
+                    <!-- Estado -->
+                    <div class="col-md-6">
+                        <label>Estado</label>
+                        <select class="form-control" asp-for="@Model.Actual!.Estado">
+                            <option value="true">Activo</option>
+                            <option value="false">Inactivo</option>
+                        </select>
                     </div>
+
                 </div>
-            }
+            </div>
+        }
 
-            @* MENSAJES *@
-            @if (ViewData.ContainsKey("Mensaje"))
-            {
-                <input type="hidden" asp-for="@Model.Accion" />
-                @await Html.PartialAsync("../Emergentes/Mensajes.cshtml")
-            }
+        <!-- =====================================================
+             MENSAJE EMERGENTE
+             ===================================================== -->
+        @if (ViewData.ContainsKey("Mensaje"))
+        {
+            <input type="hidden" asp-for="@Model.Accion" />
+            @await Html.PartialAsync("../Emergentes/Mensajes.cshtml")
+        }
 
-            @* POPUP BORRAR *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <div class='popup'>
-                    <div class='pp_del_inner'>
-                        <h2 align="left">Mensaje</h2>
-                        <h4 align="left">¿Desea borrar este servicio extra?</h4>
-                        <h6 align="left">@Model.Actual!.Nombre</h6>
+        <!-- =====================================================
+             POPUP BORRAR
+             ===================================================== -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <div class="popup">
+                <div class="pp_del_inner">
 
-                        <br /><br />
+                    <h3 class="text-start">Eliminar Servicio Extra</h3>
 
-                        <input type="submit" value="Borrar"
+                    <p class="text-start mt-3">¿Desea borrar este servicio?</p>
+
+                    <h5 class="text-start">
+                        @Model.Actual!.Nombre
+                    </h5>
+
+                    <div class="mt-4 text-center">
+                        <input type="submit"
+                               value="Borrar"
                                asp-page-handler="BtBorrar"
-                               class="btn btn-secondary" />
+                               class="btn btn-danger me-2" />
 
-                        <input type="submit" value="Cerrar"
+                        <input type="submit"
+                               value="Cancelar"
                                asp-page-handler="BtCancelar"
                                class="btn btn-secondary" />
                     </div>
+
                 </div>
-            }
+            </div>
+        }
 
-            @* LISTADO *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
-                        Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <label>Buscar por Nombre:</label>
-                <input class="cts_forms form-control"
-                       asp-for="@Model.Filtro!.Nombre"
-                       placeholder="Nombre del servicio" />
+        <!-- =====================================================
+             LISTADO + BUSCADOR
+             ===================================================== -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
+                Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <!-- Filtro -->
+            <div class="row g-2 mb-3">
+                <div class="col-md-6">
+                    <input class="form-control"
+                           asp-for="@Model.Filtro!.Nombre"
+                           placeholder="Buscar por nombre..." />
+                </div>
+            </div>
 
-                <br />
+            <!-- TABLA -->
+            <div class="containers_em">
 
-                <div class="containers_vn panel panel-default">
-                    <table class="tb_data table table-striped table-bordered table-hover">
+                <table class="tb_data">
+
+                    <thead>
                         <tr>
                             <th>Nombre</th>
                             <th>Precio</th>
                             <th>Estado</th>
                             <th class="cl_actions">Acciones</th>
                         </tr>
+                    </thead>
 
+                    <tbody>
                         @if (Model.Lista != null)
                         {
                             foreach (var elemento in Model.Lista)
                             {
                                 <tr>
                                     <td>@elemento.Nombre</td>
-                                    <td>@elemento.Precio</td>
+                                    <td>$@elemento.Precio</td>
                                     <td>@(elemento.Estado ? "Activo" : "Inactivo")</td>
 
                                     <td>
                                         <input type="submit"
                                                value="Modificar"
                                                asp-page-handler="BtModificar"
-                                               class="btn btn-secondary"
-                                               asp-route-data="@elemento.Id" />
+                                               asp-route-data="@elemento.Id"
+                                               class="btn btn-light btn-sm" />
 
                                         <input type="submit"
                                                value="Borrar"
                                                asp-page-handler="BtBorrarVal"
-                                               class="btn btn-secondary"
-                                               asp-route-data="@elemento.Id" />
+                                               asp-route-data="@elemento.Id"
+                                               class="btn btn-danger btn-sm ms-1" />
                                     </td>
                                 </tr>
                             }
                         }
-                    </table>
-                </div>
-            }
-        </form>
-    </div>
-</center>
+                    </tbody>
+
+                </table>
+
+            </div>
+        }
+
+    </form>
+
+</div>

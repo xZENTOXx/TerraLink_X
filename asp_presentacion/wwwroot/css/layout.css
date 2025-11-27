@@ -1,136 +1,265 @@
 ﻿/* ============================================================
-   SIDEBAR RESPONSIVO - TERRALINK
+   PALETA DE COLORES: TERRALINK
    ============================================================ */
-
-.sidebar {
-    width: 250px;
-    height: 100vh;
-    background: #1F2937;
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: 70px;
-    transition: all 0.3s ease;
-    overflow-y: auto;
-    z-index: 1000;
-}
-
-.sidebar-header {
-    position: fixed;
-    top: 0;
-    width: 250px;
-    background: #111827;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-}
-
-.sidebar a {
-    color: #D1D5DB;
-    padding: 12px 20px;
-    display: block;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-    .sidebar a:hover {
-        background: #374151;
-        color: white;
-    }
-
-    .sidebar a.active {
-        background: #2563EB; /* azul más vistoso */
-        color: white !important;
-        font-weight: bold;
-    }
-
-
-.sidebar strong {
-    color: #9CA3AF;
-    font-size: 13px;
-    display: block;
-    padding: 7px 20px;
-    margin-top: 10px;
-}
-
-.sidebar hr {
-    border-color: #4B5563;
-    opacity: 0.4;
-    margin: 10px 0;
+:root {
+    --cafe-oscuro: #3E2723;
+    --cafe-medio: #5D4037;
+    --crema: #F3E5AB;
+    --beige: #F8EFE2;
+    --blanco: #FFFFFF;
+    --negro: #1C1C1C;
+    --verde-acento: #4CAF50;
+    --shadow-suave: 0 2px 8px rgba(0,0,0,0.12);
+    --transition: 0.25s ease;
 }
 
 /* ============================================================
-   CONTENIDO PRINCIPAL
+   GENERAL DEL LAYOUT
    ============================================================ */
-
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--beige);
+    color: var(--negro);
 }
 
-.content {
-    margin-left: 250px;
-    padding: 20px;
-    transition: all .3s ease;
+.logged-in {
+    display: flex;
+    height: 100vh;
 }
 
-.sidebar.active ~ .content {
-    margin-left: 0;
-}
-
-/* LOGIN */
-.login-container {
-    max-width: 450px;
-    margin: auto;
-    margin-top: 40px;
+.not-logged {
+    background: var(--beige);
 }
 
 /* ============================================================
-   RESPONSIVE
+   SIDEBAR
    ============================================================ */
+.sidebar {
+    width: 250px;
+    background: var(--cafe-oscuro);
+    color: var(--blanco);
+    padding: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    box-shadow: var(--shadow-suave);
+    transition: transform var(--transition);
+    z-index: 9999;
+}
 
-@media(max-width: 768px) {
+    /* Para móviles */
+    .sidebar.active {
+        transform: translateX(-260px);
+    }
+
+/* Logo */
+.sidebar-logo {
+    text-align: center;
+    padding: 25px 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.logo-img {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin: 0 auto 8px auto;
+}
+
+.logo-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--crema);
+}
+
+/* Nav */
+.sidebar-nav {
+    margin-top: 15px;
+}
+
+.nav-section {
+    display: block;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    color: var(--crema);
+    opacity: 0.8;
+    padding: 10px 20px 5px 20px;
+    text-transform: uppercase;
+}
+
+/* Items del menú */
+.sidebar-nav a {
+    display: block;
+    padding: 10px 20px;
+    margin: 3px 0;
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 0.95rem;
+    transition: var(--transition);
+    border-left: 3px solid transparent;
+}
+
+    .sidebar-nav a i {
+        margin-right: 10px;
+        opacity: 0.85;
+    }
+
+    .sidebar-nav a:hover {
+        background: var(--cafe-medio);
+        border-left: 3px solid var(--crema);
+    }
+
+    /* Item activo */
+    .sidebar-nav a.active {
+        background: var(--cafe-medio);
+        border-left: 3px solid var(--crema);
+        font-weight: 500;
+    }
+
+/* Logout */
+.logout-btn {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 15px;
+}
+
+/* ============================================================
+   BOTÓN RESPONSIVE (hamburguesa)
+   ============================================================ */
+.menu-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: var(--cafe-oscuro);
+    border: none;
+    color: var(--blanco);
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: none;
+    z-index: 10;
+}
+
+    .menu-toggle i {
+        font-size: 1.3rem;
+    }
+
+/* Para móviles */
+@media(max-width: 900px) {
+    .menu-toggle {
+        display: block;
+    }
+
     .sidebar {
-        left: -250px;
+        transform: translateX(0);
     }
 
         .sidebar.active {
-            left: 0;
+            transform: translateX(-260px);
         }
-
-    .content {
-        margin-left: 0;
-    }
-
-    .menu-btn {
-        display: inline-block !important;
-    }
 }
 
 /* ============================================================
-   MENÚ HAMBURGUESA
+   ÁREA PRINCIPAL DEL CONTENIDO
    ============================================================ */
-
-.menu-btn {
-    display: none;
-    font-size: 25px;
-    cursor: pointer;
-    color: #111827;
-    margin: 10px;
-    z-index: 1100;
+.main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
 }
 
-/* SIN LOGIN */
-.not-logged .content {
-    margin-left: 0 !important;
-    padding: 20px;
+/* Responsive */
+@media(max-width: 900px) {
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
 }
 
-.not-logged .menu-btn {
-    display: none !important;
+/* ============================
+   EVITAR QUE EL LOGIN SE MUEVA
+   ============================ */
+
+.login-screen,
+.login-screen body,
+.login-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
 }
+
+    .login-screen .content,
+    .login-screen .sidebar,
+    .login-screen .menu-btn {
+        display: none !important;
+    }
+
+
+/* ============================================================
+   TOPBAR
+   ============================================================ */
+.topbar {
+    background: var(--crema);
+    padding: 15px 25px;
+    box-shadow: var(--shadow-suave);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .topbar h2 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--cafe-oscuro);
+        margin: 0;
+    }
+
+.user-info {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: var(--negro);
+    font-weight: 500;
+}
+
+    .user-info i {
+        margin-right: 8px;
+        font-size: 1.2rem;
+    }
+
+/* ============================================================
+   CONTENEDOR DEL CONTENIDO PRINCIPAL
+   ============================================================ */
+.content-wrapper {
+    padding: 25px 30px;
+}
+
+/* Caja general para vistas (muy elegante) */
+.page-box {
+    background: var(--blanco);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-suave);
+    margin-bottom: 25px;
+}
+
+/* ============================================================
+   SCROLLBAR PERSONALIZADO (Opcional visual)
+   ============================================================ */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: var(--cafe-medio);
+    border-radius: 10px;
+}
+
+/* ============================================================
+   FIN DEL LAYOUT
+   ============================================================ */

@@ -1,18 +1,24 @@
 ﻿@page
 @model asp_presentacion.Pages.Ventanas.PagosModel
 @{
-    ViewData["Titulo"] = "";
+    ViewData["Titulo"] = "Pagos";
 }
-<center>
-    <div>
-        <form method="POST" enctype="multipart/form-data">
-            @Html.AntiForgeryToken()
 
-            <div align="left">
-                <h3>Pagos</h3>
-            </div>
+<div class="containers_vn">
 
-            <div align="left" class="bt_panel_buttons">
+    <form method="POST" enctype="multipart/form-data">
+
+        @Html.AntiForgeryToken()
+
+        <!-- =====================================================
+             TÍTULO + BOTONES
+             ===================================================== -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+
+            <h3 class="m-0">Pagos</h3>
+
+            <div class="btn-group">
+
                 <input type="submit"
                        value="Refrescar"
                        asp-page-handler="BtRefrescar"
@@ -22,13 +28,13 @@
                 <input type="submit"
                        value="Nuevo"
                        asp-page-handler="BtNuevo"
-                       class="btn btn-secondary"
+                       class="btn btn-primary"
                        disabled="@(Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
 
                 <input type="submit"
                        value="Guardar"
                        asp-page-handler="BtGuardar"
-                       class="btn btn-secondary"
+                       class="btn btn-primary"
                        disabled="@(Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
 
                 <input type="submit"
@@ -36,104 +42,128 @@
                        asp-page-handler="BtCancelar"
                        class="btn btn-secondary"
                        disabled="@(Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
+
             </div>
 
-            @if (Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
-                        Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <input type="hidden" asp-for="@Model.Actual!.Id" />
-            }
+        </div>
 
-            @* CAMPOS OCULTOS EN BORRAR *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <input type="hidden" asp-for="@Model.Actual!.Reserva" />
-                <input type="hidden" asp-for="@Model.Actual!.Monto" />
-                <input type="hidden" asp-for="@Model.Actual!.FechadePago" />
-                <input type="hidden" asp-for="@Model.Actual!.Metodo" />
-            }
+        <!-- =====================================================
+             CAMPOS OCULTOS
+             ===================================================== -->
+        @if (Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas)
+        {
+            <input type="hidden" asp-for="@Model.Actual!.Id" />
+        }
 
-            @* FORM EDITAR/NUEVO *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Editar)
-            {
-                <div class="containers_vn panel panel-default">
-                    <h3>Pago</h3>
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <input type="hidden" asp-for="@Model.Actual!.Reserva" />
+            <input type="hidden" asp-for="@Model.Actual!.Monto" />
+            <input type="hidden" asp-for="@Model.Actual!.FechadePago" />
+            <input type="hidden" asp-for="@Model.Actual!.Metodo" />
+        }
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Reserva (ID)</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Reserva" />
-                        </div>
+        <!-- =====================================================
+             FORMULARIO NUEVO / EDITAR
+             ===================================================== -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Editar)
+        {
+            <div class="containers_em">
+
+                <h4 class="mb-3">Registrar Pago</h4>
+
+                <div class="row g-4">
+
+                    <div class="col-md-6">
+                        <label>Reserva (ID)</label>
+                        <input class="form-control"
+                               asp-for="@Model.Actual!.Reserva" />
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Monto</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Monto" />
-                        </div>
+                    <div class="col-md-6">
+                        <label>Monto</label>
+                        <input class="form-control"
+                               asp-for="@Model.Actual!.Monto" />
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Fecha de Pago</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control" type="date"
-                                   asp-for="@Model.Actual!.FechadePago" />
-                        </div>
+                    <div class="col-md-6">
+                        <label>Fecha de Pago</label>
+                        <input type="date"
+                               class="form-control"
+                               asp-for="@Model.Actual!.FechadePago" />
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Método</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Metodo" />
-                        </div>
+                    <div class="col-md-6">
+                        <label>Método</label>
+                        <input class="form-control"
+                               asp-for="@Model.Actual!.Metodo" />
                     </div>
+
                 </div>
-            }
 
-            @* MENSAJES *@
-            @if (ViewData.ContainsKey("Mensaje"))
-            {
-                <input type="hidden" asp-for="@Model.Accion" />
-                @await Html.PartialAsync("../Emergentes/Mensajes.cshtml")
-            }
+            </div>
+        }
 
-            @* POPUP BORRAR *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <div class='popup'>
-                    <div class='pp_del_inner'>
-                        <h2 align="left">Mensaje</h2>
-                        <h4 align="left">¿Desea borrar este pago?</h4>
-                        <h6 align="left">Monto: @Model.Actual!.Monto</h6>
+        <!-- =====================================================
+             MENSAJES POPUP
+             ===================================================== -->
+        @if (ViewData.ContainsKey("Mensaje"))
+        {
+            <input type="hidden" asp-for="@Model.Accion" />
+            @await Html.PartialAsync("../Emergentes/Mensajes.cshtml")
+        }
 
-                        <br /><br />
+        <!-- =====================================================
+             POPUP BORRAR
+             ===================================================== -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <div class="popup">
+                <div class="pp_del_inner">
 
-                        <input type="submit" value="Borrar"
+                    <h3 class="text-start">Eliminar Pago</h3>
+
+                    <p class="text-start mt-3">¿Desea borrar este pago?</p>
+
+                    <h5 class="text-start">Monto: @Model.Actual!.Monto</h5>
+
+                    <div class="mt-4 text-center">
+
+                        <input type="submit"
+                               value="Borrar"
                                asp-page-handler="BtBorrar"
-                               class="btn btn-secondary" />
+                               class="btn btn-danger me-2" />
 
-                        <input type="submit" value="Cerrar"
+                        <input type="submit"
+                               value="Cancelar"
                                asp-page-handler="BtCancelar"
                                class="btn btn-secondary" />
+
                     </div>
                 </div>
-            }
+            </div>
+        }
 
-            @* LISTADO *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
-                        Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <label>Fecha de Pago:</label>
-                <input class="cts_forms form-control" type="date"
-                       asp-for="@Model.Filtro!.FechadePago" />
+        <!-- =====================================================
+             LISTADO
+             ===================================================== -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
+                Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <div class="row g-2 mb-3">
+                <div class="col-md-4">
+                    <label>Fecha de Pago</label>
+                    <input type="date"
+                           class="form-control"
+                           asp-for="@Model.Filtro!.FechadePago" />
+                </div>
+            </div>
 
-                <br />
+            <div class="containers_em">
 
-                <div class="containers_vn panel panel-default">
-                    <table class="tb_data table table-striped table-bordered table-hover">
+                <table class="tb_data">
+
+                    <thead>
                         <tr>
                             <th>Reserva</th>
                             <th>Monto</th>
@@ -141,36 +171,52 @@
                             <th>Método</th>
                             <th class="cl_actions">Acciones</th>
                         </tr>
+                    </thead>
 
-                        @if (Model.Lista != null)
+                    <tbody>
+                        @* 
+                       Se recorre Model.Lista de forma segura:
+                       - Si Model.Lista NO es null, se usa esa lista.
+                       - Si Model.Lista es null, se usa Enumerable.Empty<Entidad>(), 
+                         que devuelve una lista vacía del tipo indicado.
+                       Así evitamos errores por null (NullReferenceException) 
+                       y el foreach siempre tiene algo que iterar, aunque sea una colección vacía.
+                    *@
+                        @foreach (var elemento in Model.Lista ?? Enumerable.Empty<lib_dominio.Entidades.Pagos>())
                         {
-                            foreach (var elemento in Model.Lista)
-                            {
-                                <tr>
-                                    <td>@elemento.Reserva</td>
-                                    <td>@elemento.Monto</td>
-                                    <td>@elemento.FechadePago.ToShortDateString()</td>
-                                    <td>@elemento.Metodo</td>
+                            <tr>
 
-                                    <td>
-                                        <input type="submit"
-                                               value="Modificar"
-                                               asp-page-handler="BtModificar"
-                                               class="btn btn-secondary"
-                                               asp-route-data="@elemento.Id" />
+                                <td>@elemento.Reserva</td>
+                                <td>@elemento.Monto</td>
+                                <td>@elemento.FechadePago.ToShortDateString()</td>
+                                <td>@elemento.Metodo</td>
 
-                                        <input type="submit"
-                                               value="Borrar"
-                                               asp-page-handler="BtBorrarVal"
-                                               class="btn btn-secondary"
-                                               asp-route-data="@elemento.Id" />
-                                    </td>
-                                </tr>
-                            }
+                                <td>
+
+                                    <input type="submit"
+                                           value="Modificar"
+                                           class="btn btn-light btn-sm"
+                                           asp-page-handler="BtModificar"
+                                           asp-route-data="@elemento.Id" />
+
+                                    <input type="submit"
+                                           value="Borrar"
+                                           class="btn btn-danger btn-sm ms-1"
+                                           asp-page-handler="BtBorrarVal"
+                                           asp-route-data="@elemento.Id" />
+
+                                </td>
+
+                            </tr>
                         }
-                    </table>
-                </div>
-            }
-        </form>
-    </div>
-</center>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        }
+
+    </form>
+
+</div>

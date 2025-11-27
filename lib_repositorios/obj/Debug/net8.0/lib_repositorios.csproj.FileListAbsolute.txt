@@ -16,21 +16,3 @@ C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\lib_repositorios\obj\Debug\net8.0\
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\lib_repositorios\obj\Debug\net8.0\lib_repositorios.pdb
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\lib_repositorios\obj\Debug\net8.0\lib_repositorios.genruntimeconfig.cache
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\lib_repositorios\obj\Debug\net8.0\ref\lib_repositorios.dll
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\bin\Debug\net8.0\lib_repositorios.deps.json
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\bin\Debug\net8.0\lib_repositorios.runtimeconfig.json
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\bin\Debug\net8.0\lib_repositorios.dll
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\bin\Debug\net8.0\lib_repositorios.pdb
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\bin\Debug\net8.0\lib_dominio.dll
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\bin\Debug\net8.0\lib_dominio.pdb
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\obj\Debug\net8.0\lib_repositorios.csproj.AssemblyReference.cache
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\obj\Debug\net8.0\lib_repositorios.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\obj\Debug\net8.0\lib_repositorios.AssemblyInfoInputs.cache
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\obj\Debug\net8.0\lib_repositorios.AssemblyInfo.cs
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\obj\Debug\net8.0\lib_repositorios.csproj.CoreCompileInputs.cache
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\obj\Debug\net8.0\lib_repositorios.sourcelink.json
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\obj\Debug\net8.0\lib_repo.695687AF.Up2Date
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\obj\Debug\net8.0\lib_repositorios.dll
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\obj\Debug\net8.0\refint\lib_repositorios.dll
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\obj\Debug\net8.0\lib_repositorios.pdb
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\obj\Debug\net8.0\lib_repositorios.genruntimeconfig.cache
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_repositorios\obj\Debug\net8.0\ref\lib_repositorios.dll

@@ -1,18 +1,24 @@
 ﻿@page
 @model asp_presentacion.Pages.Ventanas.InventariosModel
 @{
-    ViewData["Titulo"] = "";
+    ViewData["Titulo"] = "Inventarios";
 }
-<center>
-    <div>
-        <form method="POST" enctype="multipart/form-data">
-            @Html.AntiForgeryToken()
 
-            <div align="left">
-                <h3>Inventarios</h3>
-            </div>
+<div class="containers_vn">
 
-            <div align="left" class="bt_panel_buttons">
+    <form method="POST" enctype="multipart/form-data">
+
+        @Html.AntiForgeryToken()
+
+        <!-- =====================================================
+             TÍTULO + BOTONES
+             ===================================================== -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+
+            <h3 class="m-0">Inventarios</h3>
+
+            <div class="btn-group">
+
                 <input type="submit"
                        value="Refrescar"
                        asp-page-handler="BtRefrescar"
@@ -22,13 +28,13 @@
                 <input type="submit"
                        value="Nuevo"
                        asp-page-handler="BtNuevo"
-                       class="btn btn-secondary"
+                       class="btn btn-primary"
                        disabled="@(Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
 
                 <input type="submit"
                        value="Guardar"
                        asp-page-handler="BtGuardar"
-                       class="btn btn-secondary"
+                       class="btn btn-primary"
                        disabled="@(Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
 
                 <input type="submit"
@@ -36,120 +42,145 @@
                        asp-page-handler="BtCancelar"
                        class="btn btn-secondary"
                        disabled="@(Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
+
             </div>
 
-            @if (Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
-                        Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <input type="hidden" asp-for="@Model.Actual!.Id" />
-            }
+        </div>
 
-            @* CAMPOS OCULTOS PARA BORRAR *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <input type="hidden" asp-for="@Model.Actual!.Nombre" />
-                <input type="hidden" asp-for="@Model.Actual!.Cantidad" />
-                <input type="hidden" asp-for="@Model.Actual!.Estado" />
-                <input type="hidden" asp-for="@Model.Actual!.Finca" />
-            }
+        <!-- ID OCULTO -->
+        @if (Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas)
+        {
+            <input type="hidden" asp-for="@Model.Actual!.Id" />
+        }
 
-            @* FORMULARIO EDITAR / NUEVO *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Editar)
-            {
-                <div class="containers_vn panel panel-default">
-                    <h3>Inventario</h3>
+        <!-- CAMPOS OCULTOS PARA BORRAR -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <input type="hidden" asp-for="@Model.Actual!.Nombre" />
+            <input type="hidden" asp-for="@Model.Actual!.Cantidad" />
+            <input type="hidden" asp-for="@Model.Actual!.Estado" />
+            <input type="hidden" asp-for="@Model.Actual!.Finca" />
+        }
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Finca</label>
-                        <div class="col-lg-6">
-                            <select asp-for="@Model.Actual!.Finca" class="cts_forms form-control">
-                                <option value="">Seleccione una finca</option>
-                                @foreach (var finca in Model.ListaFincas!)
-                                {
-                                    <option value="@finca.Id">@finca.Nombre</option>
-                                }
-                            </select>
-                        </div>
+        <!-- =====================================================
+             FORMULARIO EDITAR / NUEVO
+             ===================================================== -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Editar)
+        {
+            <div class="containers_em mt-3">
+
+                <h4 class="mb-3">Inventario</h4>
+
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <label>Finca</label>
+                        <select asp-for="@Model.Actual!.Finca" class="form-control">
+                            <option value="">Seleccione una finca</option>
+                            @foreach (var finca in Model.ListaFincas!)
+                            {
+                                <option value="@finca.Id">@finca.Nombre</option>
+                            }
+                        </select>
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Nombre</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Nombre" />
-                        </div>
+                    <div class="col-md-6">
+                        <label>Nombre</label>
+                        <input class="form-control"
+                               asp-for="@Model.Actual!.Nombre" />
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Cantidad</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Cantidad" />
-                        </div>
+                    <div class="col-md-6">
+                        <label>Cantidad</label>
+                        <input class="form-control"
+                               asp-for="@Model.Actual!.Cantidad" />
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-lg-4 control-label">Estado</label>
-                        <div class="col-lg-6">
-                            <input class="cts_forms form-control"
-                                   asp-for="@Model.Actual!.Estado" />
-                        </div>
+                    <div class="col-md-6">
+                        <label>Estado</label>
+                        <input class="form-control"
+                               asp-for="@Model.Actual!.Estado" />
                     </div>
+
                 </div>
-            }
 
-            @* MENSAJES *@
-            @if (ViewData.ContainsKey("Mensaje"))
-            {
-                <input type="hidden" asp-for="@Model.Accion" />
-                @await Html.PartialAsync("../Emergentes/Mensajes.cshtml")
-            }
+            </div>
+        }
 
-            @* POPUP BORRAR *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
-                <div class='popup'>
-                    <div class='pp_del_inner'>
-                        <h2 align="left">Mensaje</h2>
-                        <h4 align="left">¿Desea borrar este inventario?</h4>
-                        <h6 align="left">@Model.Actual!.Nombre</h6>
+        <!-- =====================================================
+             MENSAJES
+             ===================================================== -->
+        @if (ViewData.ContainsKey("Mensaje"))
+        {
+            <input type="hidden" asp-for="@Model.Accion" />
+            @await Html.PartialAsync("../Emergentes/Mensajes.cshtml")
+        }
 
-                        <br /><br />
+        <!-- =====================================================
+             POPUP BORRAR
+             ===================================================== -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <div class="popup">
+                <div class="pp_del_inner">
 
-                        <input type="submit" value="Borrar"
-                               asp-page-handler="BtBorrar"
-                               class="btn btn-secondary" />
+                    <h3 class="text-start">Eliminar Inventario</h3>
 
-                        <input type="submit" value="Cerrar"
-                               asp-page-handler="BtCancelar"
-                               class="btn btn-secondary" />
+                    <p class="mt-3 text-start">¿Desea borrar este elemento?</p>
+
+                    <h5 class="text-start">
+                        @Model.Actual!.Nombre
+                    </h5>
+
+                    <div class="mt-4 text-center">
+                        <input type="submit"
+                               value="Borrar"
+                               class="btn btn-danger me-2"
+                               asp-page-handler="BtBorrar" />
+
+                        <input type="submit"
+                               value="Cancelar"
+                               class="btn btn-secondary"
+                               asp-page-handler="BtCancelar" />
                     </div>
+
                 </div>
-            }
+            </div>
+        }
 
-            @* LISTADO *@
-            @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
-                        Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
-            {
+        <!-- =====================================================
+             LISTADO
+             ===================================================== -->
+        @if (Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Listas ||
+                Model.Accion == lib_dominio.Nucleo.Enumerables.Ventanas.Borrar)
+        {
+            <div class="row g-2 mb-3">
 
-                <label>Filtrar por Finca:</label>
-                <select asp-for="@Model.Filtro!.Finca" class="cts_forms form-control">
-                    <option value="">Todas</option>
-                    @foreach (var finca in Model.ListaFincas!)
-                    {
-                        <option value="@finca.Id">@finca.Nombre</option>
-                    }
-                </select>
+                <div class="col-md-6">
+                    <label>Filtrar por Finca:</label>
+                    <select asp-for="@Model.Filtro!.Finca" class="form-control">
+                        <option value="">Todas</option>
+                        @foreach (var finca in Model.ListaFincas!)
+                        {
+                            <option value="@finca.Id">@finca.Nombre</option>
+                        }
+                    </select>
+                </div>
 
-                <label>Filtrar por Nombre:</label>
-                <input class="cts_forms form-control"
-                       asp-for="@Model.Filtro!.Nombre"
-                       placeholder="Buscar por Nombre" />
+                <div class="col-md-6">
+                    <label>Filtrar por Nombre:</label>
+                    <input class="form-control"
+                           asp-for="@Model.Filtro!.Nombre"
+                           placeholder="Buscar por nombre..." />
+                </div>
 
-                <br />
+            </div>
 
-                <div class="containers_vn panel panel-default">
-                    <table class="tb_data table table-striped table-bordered table-hover">
+            <div class="containers_em">
+
+                <table class="tb_data">
+
+                    <thead>
                         <tr>
                             <th>Finca</th>
                             <th>Nombre</th>
@@ -157,36 +188,48 @@
                             <th>Estado</th>
                             <th class="cl_actions">Acciones</th>
                         </tr>
+                    </thead>
 
-                        @if (Model.Lista != null)
+                    <tbody>
+                        @* 
+                       Se recorre Model.Lista de forma segura:
+                       - Si Model.Lista NO es null, se usa esa lista.
+                       - Si Model.Lista es null, se usa Enumerable.Empty<Entidad>(), 
+                         que devuelve una lista vacía del tipo indicado.
+                       Así evitamos errores por null (NullReferenceException) 
+                       y el foreach siempre tiene algo que iterar, aunque sea una colección vacía.
+                    *@
+                        @foreach (var elemento in Model.Lista ?? Enumerable.Empty<lib_dominio.Entidades.Inventarios>())
                         {
-                            foreach (var elemento in Model.Lista)
-                            {
-                                <tr>
-                                    <td>@elemento._Finca?.Nombre</td>
-                                    <td>@elemento.Nombre</td>
-                                    <td>@elemento.Cantidad</td>
-                                    <td>@elemento.Estado</td>
+                            <tr>
+                                <td>@elemento._Finca?.Nombre</td>
+                                <td>@elemento.Nombre</td>
+                                <td>@elemento.Cantidad</td>
+                                <td>@elemento.Estado</td>
 
-                                    <td>
-                                        <input type="submit"
-                                               value="Modificar"
-                                               asp-page-handler="BtModificar"
-                                               class="btn btn-secondary"
-                                               asp-route-data="@elemento.Id" />
+                                <td>
+                                    <input type="submit"
+                                           value="Modificar"
+                                           class="btn btn-light btn-sm"
+                                           asp-page-handler="BtModificar"
+                                           asp-route-data="@elemento.Id" />
 
-                                        <input type="submit"
-                                               value="Borrar"
-                                               asp-page-handler="BtBorrarVal"
-                                               class="btn btn-secondary"
-                                               asp-route-data="@elemento.Id" />
-                                    </td>
-                                </tr>
-                            }
+                                    <input type="submit"
+                                           value="Borrar"
+                                           class="btn btn-danger btn-sm ms-1"
+                                           asp-page-handler="BtBorrarVal"
+                                           asp-route-data="@elemento.Id" />
+                                </td>
+                            </tr>
                         }
-                    </table>
-                </div>
-            }
-        </form>
-    </div>
-</center>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        }
+
+    </form>
+
+</div>

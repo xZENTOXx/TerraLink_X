@@ -3,69 +3,106 @@
 @{
     ViewData["Titulo"] = "Auditorías";
 }
-<center>
-    <div>
-        <form method="POST">
-            @Html.AntiForgeryToken()
 
-            <h3 align="left">Auditorías del Sistema</h3>
+<div class="containers_vn">
 
-            <div align="left" class="bt_panel_buttons">
-                <input type="submit" value="Refrescar" asp-page-handler="BtRefrescar"
-                       class="btn btn-secondary"
-                       disabled="@(Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
+    <form method="POST">
+        @Html.AntiForgeryToken()
+
+        <!-- =====================================================
+             TÍTULO + BOTÓN REFRESCAR
+             ===================================================== -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+
+            <h3 class="m-0">Auditorías del Sistema</h3>
+
+            <input type="submit"
+                   value="Refrescar"
+                   asp-page-handler="BtRefrescar"
+                   class="btn btn-primary"
+                   disabled="@(Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
+
+        </div>
+
+        <!-- =====================================================
+             FILTROS
+             ===================================================== -->
+        <div class="containers_em mb-3">
+
+            <h5 class="mb-3">Filtros</h5>
+
+            <div class="row g-3">
+
+                <div class="col-md-4">
+                    <label>Acción</label>
+                    <input class="form-control"
+                           asp-for="Filtro!.Accion"
+                           placeholder="Insertar, Modificar, Borrar, etc." />
+                </div>
+
+                <div class="col-md-4">
+                    <label>ID Usuario</label>
+                    <input class="form-control"
+                           asp-for="FiltroUsuario"
+                           placeholder="Ej: 3" />
+                </div>
+
+                <div class="col-md-4">
+                    <label>Fecha</label>
+                    <input type="date"
+                           class="form-control"
+                           asp-for="FiltroFecha" />
+                </div>
+
             </div>
 
-            <br />
+        </div>
 
-            <!-- FILTROS -->
-            <div class="form-group">
-                <label>Acción:</label>
-                <input class="cts_forms form-control" asp-for="Filtro!.Accion"
-                       placeholder="Insertar, Modificar, Borrar" />
-            </div>
+        <!-- =====================================================
+             TABLA DE AUDITORÍAS
+             ===================================================== -->
+        <div class="containers_em">
 
-            <div class="form-group">
-                <label>ID Usuario:</label>
-                <input class="cts_forms form-control" asp-for="FiltroUsuario"
-                       placeholder="Ej: 3" />
-            </div>
+            <table class="tb_data">
 
-            <div class="form-group">
-                <label>Fecha:</label>
-                <input type="date" class="cts_forms form-control" asp-for="FiltroFecha" />
-            </div>
-
-            <br />
-
-            <!-- TABLA -->
-            <div class="containers_vn panel panel-default">
-                <table class="tb_data table table-striped table-bordered table-hover">
+                <thead>
                     <tr>
                         <th>ID</th>
                         <th>Usuario</th>
                         <th>Acción</th>
-                        <th>Tabla Afectada</th>
+                        <th>Tabla</th>
                         <th>ID Registro</th>
                         <th>Fecha</th>
                     </tr>
+                </thead>
 
-                    @if (Model.Lista != null)
+                <tbody>
+                    @* 
+                       Se recorre Model.Lista de forma segura:
+                       - Si Model.Lista NO es null, se usa esa lista.
+                       - Si Model.Lista es null, se usa Enumerable.Empty<Entidad>(), 
+                         que devuelve una lista vacía del tipo indicado.
+                       Así evitamos errores por null (NullReferenceException) 
+                       y el foreach siempre tiene algo que iterar, aunque sea una colección vacía.
+                    *@
+                    @foreach (var a in Model.Lista ?? Enumerable.Empty<lib_dominio.Entidades.Auditorias>())
                     {
-                        foreach (var a in Model.Lista)
-                        {
-                            <tr>
-                                <td>@a.Id</td>
-                                <td>@a._Usuario?.NombreUsuario</td>
-                                <td>@a.Accion</td>
-                                <td>@a.TablaAfectada</td>
-                                <td>@a.IdRegistroAfectado</td>
-                                <td>@a.Fecha.ToString("yyyy-MM-dd HH:mm")</td>
-                            </tr>
-                        }
+                        <tr>
+                            <td>@a.Id</td>
+                            <td>@a._Usuario?.NombreUsuario</td>
+                            <td>@a.Accion</td>
+                            <td>@a.TablaAfectada</td>
+                            <td>@a.IdRegistroAfectado</td>
+                            <td>@a.Fecha.ToString("yyyy-MM-dd HH:mm")</td>
+                        </tr>
                     }
-                </table>
-            </div>
-        </form>
-    </div>
-</center>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </form>
+
+</div>

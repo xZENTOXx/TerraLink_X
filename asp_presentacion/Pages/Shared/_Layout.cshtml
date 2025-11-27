@@ -1,16 +1,41 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+    <!-- Metadatos base del documento -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- El título cambia según la vista -->
     <title>@ViewData["Titulo"] - TerraLink</title>
 
+    <!-- Tipografía corporativa elegida: Poppins
+         → Limpia, moderna y amigable visualmente -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap: base de componentes y grid -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Estilos globales del sistema -->
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/layout.css" />
+
+    <!-- Estilos visuales del layout general -->
+    <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true" />
+
+    <!-- Estilos exclusivos para la pantalla de login
+         → Solo aplican cuando no hay sesión -->
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+
+    <!-- Biblioteca de íconos: Bootstrap Icons
+         → Elegidos porque no requieren JavaScript -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
 </head>
 
 @functions {
+        /*
+              Método utilitario para marcar enlaces activos en el sidebar.
+              → Permite resaltar la sección donde está el usuario.
+        */
         public string IsActive(string route)
         {
                 var current = Context.Request.Path.ToString().ToLower();
@@ -18,71 +43,147 @@
         }
 }
 
-<body class="@(Context.Session.GetString("Usuario") != null ? "logged-in" : "not-logged")">
+<body class="@(Context.Session.GetString("Usuario") != null ? "logged-in" : "login-screen")">
 
+    <!-- ============================================================
+         SI HAY SESIÓN → Mostrar layout completo (sidebar + topbar).
+         ============================================================ -->
     @if (Context.Session.GetString("Usuario") != null)
     {
-        <!-- SIDEBAR -->
-        <div class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                TerraLink
+        <!-- ============= SIDEBAR LATERAL =============
+             Ubicado fuera del flujo del documento.
+             Se oculta/expande en responsive vía CSS.
+        -->
+        <aside class="sidebar" id="sidebar">
+
+            <!-- Área reservada para el logo
+                 → Si aún no existe imagen, se usa texto -->
+            <div class="sidebar-logo">
+                <span class="logo-text">TerraLink</span>
             </div>
 
-            <a asp-page="/Index" class="@IsActive("/Index")">Dashboard</a>
+            <!-- Navegación principal -->
+            <nav class="sidebar-nav">
 
-            <hr style="background:#4B5563" />
+                <!-- Agrupación visual por módulos -->
+                <strong class="nav-section">Inicio</strong>
+                <a asp-page="/Index" class="@IsActive("/Index")">
+                    <i class="bi bi-speedometer2"></i> Dashboard
+                </a>
 
-            <strong class="px-3">Gestión Principal</strong>
-            <a asp-page="/Ventanas/Fincas" class="@IsActive("/Ventanas/Fincas")">Fincas</a>
-            <a asp-page="/Ventanas/Clientes" class="@IsActive("/Ventanas/Clientes")">Clientes</a>
-            <a asp-page="/Ventanas/Empleados" class="@IsActive("/Ventanas/Empleados")">Empleados</a>
+                <!-- Módulo de administración general -->
+                <strong class="nav-section">Gestión Principal</strong>
+                <a asp-page="/Ventanas/Fincas" class="@IsActive("/Ventanas/Fincas")">
+                    <i class="bi bi-house-door"></i> Fincas
+                </a>
+                <a asp-page="/Ventanas/Clientes" class="@IsActive("/Ventanas/Clientes")">
+                    <i class="bi bi-people"></i> Clientes
+                </a>
+                <a asp-page="/Ventanas/Empleados" class="@IsActive("/Ventanas/Empleados")">
+                    <i class="bi bi-person-badge"></i> Empleados
+                </a>
 
-            <hr style="background:#4B5563" />
+                <!-- Módulo de reservas -->
+                <strong class="nav-section">Reservas</strong>
+                <a asp-page="/Ventanas/Reservas" class="@IsActive("/Ventanas/Reservas")">
+                    <i class="bi bi-journal-check"></i> Reservas
+                </a>
+                <a asp-page="/Ventanas/ServiciosExtras" class="@IsActive("/Ventanas/ServiciosExtras")">
+                    <i class="bi bi-stars"></i> Servicios Extras
+                </a>
+                <a asp-page="/Ventanas/ReservasServicios" class="@IsActive("/Ventanas/ReservasServicios")">
+                    <i class="bi bi-bag-check"></i> Reserva - Servicios
+                </a>
+                <a asp-page="/Ventanas/Promociones" class="@IsActive("/Ventanas/Promociones")">
+                    <i class="bi bi-gift"></i> Promociones
+                </a>
+                <a asp-page="/Ventanas/ReservaPromociones" class="@IsActive("/Ventanas/ReservaPromociones")">
+                    <i class="bi bi-ticket-perforated"></i> Reserva - Promociones
+                </a>
 
-            <strong class="px-3">Reservas</strong>
-            <a asp-page="/Ventanas/Reservas" class="@IsActive("/Ventanas/Reservas")">Reservas</a>
-            <a asp-page="/Ventanas/ServiciosExtras" class="@IsActive("/Ventanas/ServiciosExtras")">Servicios Extras</a>
-            <a asp-page="/Ventanas/ReservasServicios" class="@IsActive("/Ventanas/ReservasServicios")">Reserva - Servicios</a>
-            <a asp-page="/Ventanas/Promociones" class="@IsActive("/Ventanas/Promociones")">Promociones</a>
-            <a asp-page="/Ventanas/ReservaPromociones" class="@IsActive("/Ventanas/ReservaPromociones")">Reserva - Promociones</a>
+                <!-- Módulo operativo -->
+                <strong class="nav-section">Operaciones</strong>
+                <a asp-page="/Ventanas/Inventarios" class="@IsActive("/Ventanas/Inventarios")">
+                    <i class="bi bi-box-seam"></i> Inventarios
+                </a>
+                <a asp-page="/Ventanas/Mantenimientos" class="@IsActive("/Ventanas/Mantenimientos")">
+                    <i class="bi bi-tools"></i> Mantenimientos
+                </a>
+                <a asp-page="/Ventanas/Tareas" class="@IsActive("/Ventanas/Tareas")">
+                    <i class="bi bi-clipboard-check"></i> Tareas
+                </a>
+                <a asp-page="/Ventanas/Pagos" class="@IsActive("/Ventanas/Pagos")">
+                    <i class="bi bi-cash-stack"></i> Pagos
+                </a>
+                <a asp-page="/Ventanas/Reseñas" class="@IsActive("/Ventanas/Reseñas")">
+                    <i class="bi bi-stars"></i> Reseñas
+                </a>
+                <!-- Módulo de configuración -->
+                <strong class="nav-section">Sistema</strong>
+                <a asp-page="/Ventanas/Usuarios" class="@IsActive("/Ventanas/Usuarios")">
+                    <i class="bi bi-person-lock"></i> Usuarios
+                </a>
+                <a asp-page="/Ventanas/Auditorias" class="@IsActive("/Ventanas/Auditorias")">
+                    <i class="bi bi-shield-check"></i> Auditorías
+                </a>
 
-            <hr style="background:#4B5563" />
+                <!-- Botón logout -->
+                <a asp-page="/Logout" class="logout-btn">
+                    <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+                </a>
+            </nav>
+        </aside>
 
-            <strong class="px-3">Operaciones</strong>
-            <a asp-page="/Ventanas/Inventarios" class="@IsActive("/Ventanas/Inventarios")">Inventarios</a>
-            <a asp-page="/Ventanas/Mantenimientos" class="@IsActive("/Ventanas/Mantenimientos")">Mantenimientos</a>
-            <a asp-page="/Ventanas/Tareas" class="@IsActive("/Ventanas/Tareas")">Tareas</a>
-            <a asp-page="/Ventanas/Pagos" class="@IsActive("/Ventanas/Pagos")">Pagos</a>
+        <!-- Botón para abrir/cerrar sidebar en pantallas pequeñas -->
+        <button class="menu-toggle" onclick="toggleSidebar()">
+            <i class="bi bi-list"></i>
+        </button>
 
-            <hr style="background:#4B5563" />
+        <!-- ====================== CONTENIDO PRINCIPAL ====================== -->
+        <div class="main-content">
 
-            <strong class="px-3">Sistema</strong>
-            <a asp-page="/Ventanas/Usuarios" class="@IsActive("/Ventanas/Usuarios")">Usuarios</a>
-            <a asp-page="/Ventanas/Auditorias" class="@IsActive("/Ventanas/Auditorias")">Auditorías</a>
+            <!-- Topbar con título dinámico y usuario actual -->
+            <header class="topbar">
+                <h2>@ViewData["Titulo"]</h2>
 
-            <hr style="background:#4B5563" />
+                <div class="user-info">
+                    <i class="bi bi-person-circle"></i>
+                    <span>@Context.Session.GetString("Usuario")</span>
+                </div>
+            </header>
 
-            <a asp-page="/Logout">Cerrar Sesión</a>
+            <!-- Renderizado del contenido de cada página -->
+            <main class="content-wrapper">
+                @RenderBody()
+            </main>
         </div>
-
-        <!-- HAMBURGER MENU -->
-        <span class="menu-btn" onclick="toggleSidebar()">&#9776;</span>
     }
-
-    <div class="content">
-        <main role="main" class="pb-3">
+    else
+    {
+        <!--
+            Si NO hay sesión → modo login.
+            Se evita cargar sidebar/topbar.
+            El login.css se encarga de centrar y dar estilo.
+        -->
+        <main class="login-wrapper">
             @RenderBody()
         </main>
-    </div>
+    }
 
+    <!-- Bootstrap JS -->
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        /*
+           Activa/desactiva la visibilidad del sidebar en responsive.
+           Solo aplica cuando el usuario está logueado.
+        */
         function toggleSidebar() {
-            document.getElementById("sidebar").classList.toggle("active");
+            document.getElementById("sidebar")?.classList.toggle("active");
         }
     </script>
 
+    <!-- Sección reservada para scripts adicionales por vista -->
     @await RenderSectionAsync("Scripts", required: false)
 
 </body>
