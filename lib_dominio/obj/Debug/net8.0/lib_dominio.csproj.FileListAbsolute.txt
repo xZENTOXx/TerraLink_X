@@ -1,16 +1,3 @@
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\bin\Debug\net8.0\lib_dominio.deps.json
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\bin\Debug\net8.0\lib_dominio.dll
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\bin\Debug\net8.0\lib_dominio.pdb
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_dominio.csproj.AssemblyReference.cache
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_dominio.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_dominio.AssemblyInfoInputs.cache
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_dominio.AssemblyInfo.cs
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_dominio.csproj.CoreCompileInputs.cache
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_dominio.sourcelink.json
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_dominio.dll
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\refint\lib_dominio.dll
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_dominio.pdb
-C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\ref\lib_dominio.dll
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\lib_dominio\bin\Debug\net8.0\lib_dominio.deps.json
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\lib_dominio\bin\Debug\net8.0\lib_dominio.dll
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\lib_dominio\bin\Debug\net8.0\lib_dominio.pdb
@@ -24,3 +11,16 @@ C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_d
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\lib_dominio\obj\Debug\net8.0\refint\lib_dominio.dll
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_dominio.pdb
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\lib_dominio\obj\Debug\net8.0\ref\lib_dominio.dll
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\bin\Debug\net8.0\lib_dominio.deps.json
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\bin\Debug\net8.0\lib_dominio.dll
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\bin\Debug\net8.0\lib_dominio.pdb
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_dominio.csproj.AssemblyReference.cache
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_dominio.AssemblyInfoInputs.cache
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_dominio.AssemblyInfo.cs
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_dominio.csproj.CoreCompileInputs.cache
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_dominio.sourcelink.json
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_dominio.dll
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\refint\lib_dominio.dll
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\lib_dominio.pdb
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_dominio\obj\Debug\net8.0\ref\lib_dominio.dll

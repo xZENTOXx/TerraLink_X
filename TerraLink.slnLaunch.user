@@ -1,6 +1,6 @@
 [
   {
-    "Name": "Nuevo perfil",
+    "Name": "New Profile",
     "Projects": [
       {
         "Path": "asp_servicios\\asp_servicios.csproj",

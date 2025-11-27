@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "MEDBCUPd/eE=",
+  "dgSpecHash": "y8kiolhcrb4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\USUARIO\\OneDrive\\Desktop\\TerraLink_X\\lib_presentaciones\\lib_presentaciones.csproj",
+  "projectFilePath": "C:\\Users\\juand\\OneDrive\\Documentos\\2-ACADEMICO\\ITM\\2025-2\\3-Programación de Software\\TerraLink_X\\lib_presentaciones\\lib_presentaciones.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\USUARIO\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\juand\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

@@ -35,7 +35,13 @@ namespace asp_servicios.Nucleo
             // Luego, si llamas ObtenerValor y nunca se cargó, fallará.
             // (Se puede mejorar mostrando un mensaje o lanzando una excepción amigable).
             if (!File.Exists(DatosGenerales.ruta_json))
+            {
+                Console.WriteLine("ARCHIVO NO ENCONTRADO EN: " + DatosGenerales.ruta_json);
                 return;
+            }
+
+            Console.WriteLine("ARCHIVO SÍ ENCONTRADO EN: " + DatosGenerales.ruta_json);
+
 
             // Abrimos y leemos todo el contenido del JSON.
             StreamReader jsonStream = File.OpenText(DatosGenerales.ruta_json);
