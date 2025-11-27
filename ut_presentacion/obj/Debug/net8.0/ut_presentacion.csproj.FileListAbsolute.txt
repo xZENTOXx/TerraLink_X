@@ -1,0 +1,7 @@
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\ut_presentacion\bin\Debug\net8.0\.msCoverageSourceRootsMapping_ut_presentacion
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\ut_presentacion\obj\Debug\net8.0\ut_presentacion.csproj.AssemblyReference.cache
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\ut_presentacion\obj\Debug\net8.0\ut_presentacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\ut_presentacion\obj\Debug\net8.0\ut_presentacion.AssemblyInfoInputs.cache
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\ut_presentacion\obj\Debug\net8.0\ut_presentacion.AssemblyInfo.cs
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\ut_presentacion\obj\Debug\net8.0\ut_presentacion.csproj.CoreCompileInputs.cache
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\ut_presentacion\obj\Debug\net8.0\ut_presentacion.sourcelink.json

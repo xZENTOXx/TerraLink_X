@@ -171,16 +171,5 @@ namespace ut_presentacion.Nucleo
             };
         }
 
-        public static Auditorias Auditorias(int usuarioId = 1)
-        {
-            return new Auditorias
-            {
-                Usuario = usuarioId,
-                Accion = "TEST",
-                Fecha = DateTime.Now,
-                TablaAfectada = "Nada",
-                IdRegistroAfectado = null
-            };
-        }
     }
 }

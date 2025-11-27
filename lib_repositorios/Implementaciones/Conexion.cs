@@ -96,12 +96,6 @@ namespace lib_repositorios.Implementaciones
                 .HasForeignKey(t => t.Finca)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            //        AUDITORIAS 
-            modelBuilder.Entity<Auditorias>()
-                .HasOne(a => a._Usuario)
-                .WithMany()
-                .HasForeignKey(a => a.Usuario)
-                .OnDelete(DeleteBehavior.Restrict);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

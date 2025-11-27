@@ -14,3 +14,19 @@ C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\lib_presentaciones\obj\Debug\net8.
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\lib_presentaciones\obj\Debug\net8.0\refint\lib_presentaciones.dll
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\lib_presentaciones\obj\Debug\net8.0\lib_presentaciones.pdb
 C:\Users\USUARIO\OneDrive\Desktop\TerraLink_X\lib_presentaciones\obj\Debug\net8.0\ref\lib_presentaciones.dll
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_presentaciones\bin\Debug\net8.0\lib_presentaciones.deps.json
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_presentaciones\bin\Debug\net8.0\lib_presentaciones.dll
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_presentaciones\bin\Debug\net8.0\lib_presentaciones.pdb
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_presentaciones\bin\Debug\net8.0\lib_dominio.dll
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_presentaciones\bin\Debug\net8.0\lib_dominio.pdb
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_presentaciones\obj\Debug\net8.0\lib_presentaciones.csproj.AssemblyReference.cache
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_presentaciones\obj\Debug\net8.0\lib_presentaciones.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_presentaciones\obj\Debug\net8.0\lib_presentaciones.AssemblyInfoInputs.cache
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_presentaciones\obj\Debug\net8.0\lib_presentaciones.AssemblyInfo.cs
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_presentaciones\obj\Debug\net8.0\lib_presentaciones.csproj.CoreCompileInputs.cache
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_presentaciones\obj\Debug\net8.0\lib_presentaciones.sourcelink.json
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_presentaciones\obj\Debug\net8.0\lib_pres.F3664F89.Up2Date
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_presentaciones\obj\Debug\net8.0\lib_presentaciones.dll
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_presentaciones\obj\Debug\net8.0\refint\lib_presentaciones.dll
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_presentaciones\obj\Debug\net8.0\lib_presentaciones.pdb
+C:\Users\juand\OneDrive\Documentos\2-ACADEMICO\ITM\2025-2\3-Programación de Software\TerraLink_X\lib_presentaciones\obj\Debug\net8.0\ref\lib_presentaciones.dll

@@ -9,11 +9,8 @@
     <form method="POST">
         @Html.AntiForgeryToken()
 
-        <!-- =====================================================
-             TÍTULO + BOTÓN REFRESCAR
-             ===================================================== -->
+        <!-- TÍTULO + REFRESCAR -->
         <div class="d-flex justify-content-between align-items-center mb-3">
-
             <h3 class="m-0">Auditorías del Sistema</h3>
 
             <input type="submit"
@@ -21,50 +18,25 @@
                    asp-page-handler="BtRefrescar"
                    class="btn btn-primary"
                    disabled="@(Model.Accion != lib_dominio.Nucleo.Enumerables.Ventanas.Listas)" />
-
         </div>
 
-        <!-- =====================================================
-             FILTROS
-             ===================================================== -->
+        <!-- FILTRO (SOLO FECHA) -->
         <div class="containers_em mb-3">
-
-            <h5 class="mb-3">Filtros</h5>
+            <h5 class="mb-3">Filtro</h5>
 
             <div class="row g-3">
-
-                <div class="col-md-4">
-                    <label>Acción</label>
-                    <input class="form-control"
-                           asp-for="Filtro!.Accion"
-                           placeholder="Insertar, Modificar, Borrar, etc." />
-                </div>
-
-                <div class="col-md-4">
-                    <label>ID Usuario</label>
-                    <input class="form-control"
-                           asp-for="FiltroUsuario"
-                           placeholder="Ej: 3" />
-                </div>
-
                 <div class="col-md-4">
                     <label>Fecha</label>
                     <input type="date"
                            class="form-control"
                            asp-for="FiltroFecha" />
                 </div>
-
             </div>
-
         </div>
 
-        <!-- =====================================================
-             TABLA DE AUDITORÍAS
-             ===================================================== -->
+        <!-- TABLA -->
         <div class="containers_em">
-
             <table class="tb_data">
-
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -89,18 +61,16 @@
                     {
                         <tr>
                             <td>@a.Id</td>
-                            <td>@a._Usuario?.NombreUsuario</td>
+                            <td>@a.Usuario</td>
                             <td>@a.Accion</td>
                             <td>@a.TablaAfectada</td>
                             <td>@a.IdRegistroAfectado</td>
                             <td>@a.Fecha.ToString("yyyy-MM-dd HH:mm")</td>
                         </tr>
                     }
-
                 </tbody>
 
             </table>
-
         </div>
 
     </form>

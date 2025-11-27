@@ -8,17 +8,19 @@ namespace asp_presentacion.Pages.Ventanas
 {
     public class AuditoriasModel : GenericoModel<Auditorias, IAuditoriasPresentacion>
     {
+        // Filtro ÚNICO: fecha
+        [BindProperty]
+        public DateTime FiltroFecha { get; set; } = DateTime.Today;
+
         public AuditoriasModel(IAuditoriasPresentacion presentacion)
             : base(presentacion)
         {
+            // Filtro base — solo usamos fecha
             Filtro = new Auditorias
             {
-                Accion = ""
+                Fecha = DateTime.Today
             };
         }
-
-        [BindProperty] public int FiltroUsuario { get; set; }
-        [BindProperty] public DateTime FiltroFecha { get; set; } = DateTime.Today;
 
         public override void OnPostBtRefrescar()
         {
@@ -27,16 +29,8 @@ namespace asp_presentacion.Pages.Ventanas
                 ValidarSesion();
                 Accion = Enumerables.Ventanas.Listas;
 
-                // PRIORIDAD DE FILTROS
-                if (!string.IsNullOrEmpty(Filtro!.Accion))
-                {
-                    Lista = Presentacion!.PorAccion(Filtro).Result;
-                }
-                else if (FiltroUsuario > 0)
-                {
-                    Lista = Presentacion!.PorUsuario(FiltroUsuario).Result;
-                }
-                else if (FiltroFecha != default)
+                // FILTRO ÚNICO
+                if (FiltroFecha != default)
                 {
                     Lista = Presentacion!.PorFecha(FiltroFecha).Result;
                 }
@@ -53,6 +47,7 @@ namespace asp_presentacion.Pages.Ventanas
             }
         }
 
+        // Auditorías no permite crear, modificar, ni borrar desde la UI
         public override void OnPostBtNuevo() { }
         public override void OnPostBtModificar(string data) { }
         public override void OnPostBtGuardar() { }

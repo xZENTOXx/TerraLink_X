@@ -163,15 +163,18 @@ CREATE TABLE dbo.[Reseñas](
 );
 
 -- 15. Auditoria
-CREATE TABLE dbo.Auditorias(
- [Id] INT IDENTITY(1,1) PRIMARY KEY,
- [Usuario] INT NOT NULL,
- [Accion] NVARCHAR(200) NOT NULL,
- [Fecha] DATETIME2 NOT NULL DEFAULT GETDATE(),
- [TablaAfectada] NVARCHAR(50),
- [IdRegistroAfectado] INT,
- CONSTRAINT FK_Auditoria_Usuarios FOREIGN KEY ([Usuario]) REFERENCES dbo.Usuarios([Id])
+CREATE TABLE dbo.Auditorias (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+
+    -- Guardamos el nombre del usuario directamente como string
+    Usuario NVARCHAR(100) NOT NULL,
+
+    Accion NVARCHAR(200) NOT NULL,
+    Fecha DATETIME2 NOT NULL DEFAULT GETDATE(),
+    TablaAfectada NVARCHAR(100) NOT NULL,
+    IdRegistroAfectado INT NULL
 );
+
 
 -- 3) CHECKS e ÍNDICES simples (nivel básico)
 ALTER TABLE dbo.Reservas ADD CONSTRAINT CK_Reservas_Fechas CHECK (FechaFin > FechaInicio);
@@ -383,10 +386,9 @@ INSERT INTO [Reseñas] ([Finca], [Cliente], [Calificacion], [Comentario], [Fecha
 (3,3,3,'Esperaba más actividades','2026-01-03');
 
 -- AUDITORIAS (Usuario debe existir)
-INSERT INTO [Auditorias] ([Usuario], [Accion], [Fecha], [TablaAfectada], [IdRegistroAfectado]) VALUES
-(1,'CREAR_RESERVA','2025-09-18 10:05:00','Reservas',1),
-(2,'CONFIRMAR_PAGO','2025-09-18 10:10:00','Pagos',1),
-(3,'APLICAR_PROMO','2025-10-10 08:00:00','ReservaPromociones',2),
-(4,'CREAR_TAREA','2025-09-19 11:00:00','Tareas',2),
-(5,'CARGA_MANTENIMIENTO','2025-09-12 15:30:00','Mantenimientos',5);
-
+INSERT INTO Auditorias (Usuario, Accion, Fecha, TablaAfectada, IdRegistroAfectado) VALUES
+('admin','CREAR_RESERVA','2025-09-18 10:05:00','Reservas',1),
+('admin','CONFIRMAR_PAGO','2025-09-18 10:10:00','Pagos',1),
+('admin','APLICAR_PROMO','2025-10-10 08:00:00','ReservaPromociones',2),
+('admin','CREAR_TAREA','2025-09-19 11:00:00','Tareas',2),
+('admin','CARGA_MANTENIMIENTO','2025-09-12 15:30:00','Mantenimientos',5);

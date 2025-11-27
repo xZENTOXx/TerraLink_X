@@ -81,48 +81,8 @@
   },
   {
     "ContainingType": "asp_servicios.Controllers.AuditoriasController",
-    "Method": "PorAccion",
-    "RelativePath": "Auditorias/PorAccion",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "asp_servicios.Controllers.AuditoriasController",
     "Method": "PorFecha",
     "RelativePath": "Auditorias/PorFecha",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "asp_servicios.Controllers.AuditoriasController",
-    "Method": "PorUsuario",
-    "RelativePath": "Auditorias/PorUsuario",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
